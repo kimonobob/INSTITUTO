@@ -33,7 +33,7 @@
                                 </button>
                             </div>
                             <div class="tp-header-btn d-none d-md-block ml-30">
-                                <nuxt-link href="/university-application-form">Inscripciones</nuxt-link>
+                                <nuxt-link href="/preinscripcion">Inscripciones</nuxt-link>
                             </div>
                             <div class="tp-header-bar d-xl-none ml-30">
                                 <button @click="handleOffcanvas" class="offcanvas-open-btn">

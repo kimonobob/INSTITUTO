@@ -10,7 +10,7 @@
                                     <span class="tp-hero-subtitle">{{ slider.subtitle }}</span>
                                     <h2 class="tp-hero-title">{{ slider.title }}</h2>
                                     <div class="tp-hero-btn">
-                                        <nuxt-link class="tp-btn" href="/university-schedule">
+                                        <nuxt-link class="tp-btn" href="/preinscripcion">
                                             Inscribete ahora
                                             <span>
                                                 <svg-arrow-right-one />

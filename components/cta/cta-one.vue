@@ -16,7 +16,7 @@
                 <div class="col-xxl-2 col-lg-3">
                     <div class="tp-cta-btn-wrap">
                         <div class="tp-cta-btn text-lg-end">
-                            <nuxt-link class="tp-btn" href="/university-apply">Postula Ahora <span>
+                            <nuxt-link class="tp-btn" href="/preinscripcion">Postula Ahora <span>
                                     <svg-arrow-right-one clr="currentColor" />
                                 </span>
                             </nuxt-link>
