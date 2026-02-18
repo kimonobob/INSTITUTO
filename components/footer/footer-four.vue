@@ -38,8 +38,8 @@
                                 <div class="tp-footer-widget tp-footer-4-col-1 mb-30">
                                     <div :class="`tp-footer-4-btn ${inner ? 'tp-footer-btn-inner' : ''}`">
                                         <nuxt-link class="active" to="/university-admission-overview">Admisión</nuxt-link>
-                                        <nuxt-link to="/contact">Contáctanos</nuxt-link>
-                                        <nuxt-link to="/nosotros">La Institución</nuxt-link>
+                                        <nuxt-link to="/">Contáctanos</nuxt-link>
+                                        <nuxt-link to="/">La Institución</nuxt-link>
                                     </div>
                                 </div>
                             </div>
