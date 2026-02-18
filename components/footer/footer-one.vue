@@ -8,24 +8,25 @@
               <div :class="`tp-footer-widget ${style_2 ? 'tp-footer-5-col-1' : 'tp-footer-col-1'} mb-30`">
                 <div class="tp-footer-widget-logo mb-20 tp-header-logo">
                   <nuxt-link to="/">
-                    <img :src="style_2 ? '/images/logo/logo-black-2.png' : '/images/logo/logo-red.png'" alt="logo" />
+                    <img class="logo-2" src="/images/logo/logo-black-1.png" alt="logo" style="width: 250px; height: auto;">
+                    
                   </nuxt-link>
                 </div>
                 <div class="tp-footer-widget-content">
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur <br /> adipisc ing elit.
+                    Formando profesionales técnicos con valores, compromiso y vocación de servicio para el desarrollo de la provincia de Melgar y la región Puno.
                   </p>
                 </div>
                 <div class="tp-footer-contact">
-                  <span>Got Questions? Call us</span>
-                  <a href="tel:012345678">+670 413 90 762</a>
+                  <span>¿Tienes consultas? Contáctanos</span>
+                  <a href="tel:012345678">+51 000 000 000</a>
                 </div>
                 <div class="tp-footer-contact-mail">
                   <a href="mailto:acadia@gmail.com">
                     <span>
                       <svg-email-one />
                     </span>
-                    acadia@gmail.com
+                    iestpayaviri@gmail.com
                   </a>
                 </div>
               </div>
@@ -34,7 +35,7 @@
             <!-- About Links Section -->
             <div class="col-xl-2 col-lg-3 col-sm-6">
               <div :class="`tp-footer-widget ${style_2 ? 'tp-footer-5-col-2' : 'tp-footer-col-2'} mb-30`">
-                <h4 class="tp-footer-widget-title mb-20">About</h4>
+                <h4 class="tp-footer-widget-title mb-20">Institución</h4>
                 <div class="tp-footer-widget-link">
                   <ul>
                     <li v-for="link in footerLinks.link_one" :key="link.id">
@@ -48,7 +49,7 @@
             <!-- Quick Links Section -->
             <div class="col-xl-2 col-lg-2 col-sm-4">
               <div :class="`tp-footer-widget ${style_2 ? 'tp-footer-5-col-3' : 'tp-footer-col-3'} mb-30`">
-                <h4 class="tp-footer-widget-title mb-20">Quick links</h4>
+                <h4 class="tp-footer-widget-title mb-20">Accesos Directos</h4>
                 <div class="tp-footer-widget-link">
                   <ul>
                     <li v-for="link in footerLinks.link_two" :key="link.id">
@@ -62,9 +63,9 @@
             <!-- Newsletter Section -->
             <div class="col-xl-4 col-lg-4 col-sm-8">
               <div :class="`tp-footer-widget ${style_2 ? 'tp-footer-5-col-4' : 'tp-footer-col-4'} mb-30`">
-                <h4 class="tp-footer-widget-title mb-20">Our Newsletter</h4>
+                <h4 class="tp-footer-widget-title mb-20">Boletín Informativo</h4>
                 <div class="tp-footer-newsletter-wrap">
-                  <p>Enter your email and we will send you <br /> more information</p>
+                  <p>Ingresa tu correo electrónico y te enviaremos <br /> información institucional y novedades.</p>
                   <form @submit.prevent>
                     <div class="tp-footer-newsletter-wrapper mb-30">
                       <div :class="`tp-footer-newsletter-input ${style_2 ? 'tp-footer-5-newsletter-input' : ''}`">
@@ -94,7 +95,7 @@
             <div class="col-lg-12">
               <div class="tp-footer-copyright text-center">
                 <span>
-                  © {{ new Date().getFullYear() }} <a href="#">Acadia</a>. All rights reserved.
+                  © {{ new Date().getFullYear() }} <a href="#">IESTP</a>. Todos los derechos reservados
                 </span>
               </div>
             </div>

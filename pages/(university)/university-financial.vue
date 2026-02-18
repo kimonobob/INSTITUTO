@@ -3,47 +3,14 @@
         <nuxt-layout name="layout-eight">
 
             <!-- breadcrumb area start -->
-            <breadcrumb-one title="Financial Aid" subtitle="Financial Aid" :admission="true" />
+            <breadcrumb-one title="Becas y Apoyos" subtitle="Admisión" :admission="true" />
             <!-- breadcrumb area end -->
-
-            <!-- campus area start -->
-            <campus-choose-area />
-            <!-- campus area end -->
-
-            <!-- counter area start -->
-            <counter-four />
-            <!-- counter area end -->
 
             <!-- process area start -->
             <process-three />
             <!-- process area end -->
 
-            <!-- financial area start -->
-            <section class="tp-financial-area tp-financial-bg pt-90 pb-90">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="tp-financial-heading">
-                                <h3 class="tp-financial-title">Types of Aid</h3>
-                            </div>
-                        </div>
-
-                        <div v-for="item in financialAidData" :key="item.id" class="col-lg-4 col-md-6">
-                            <div class="tp-financial-item mb-30">
-                                <div class="tp-financial-thumb">
-                                    <img :src="item.imgSrc" :alt="item.title"/>
-                                </div>
-                                <div class="tp-financial-content">
-                                    <h4 class="tp-financial-content-title">{{ item.title }}</h4>
-                                    <p>{{ item.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- financial area end -->
-
+<program-three />
         </nuxt-layout>
     </div>
 </template>

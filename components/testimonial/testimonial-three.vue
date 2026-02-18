@@ -5,9 +5,9 @@
                 <div class="col-lg-12">
                     <div class="tp-testimonial-6-heading text-center mb-45">
                         <div class="tp-team-6-heading">
-                            <h5 class="tp-section-3-subtitle color-9">Testimonials</h5>
-                            <h3 class="tp-section-3-title color-9">People Say About
-                                <span>Acadia
+                            <h5 class="tp-section-3-subtitle color-9">Nuestros Egresados Hablan</h5>
+                            <h3 class="tp-section-3-title color-9">Las Personas Hablan del
+                                <span>IESTP
                                     <svg-shape-line-four/>
                                 </span>
                             </h3>
@@ -69,3 +69,48 @@ onUnmounted(() => {
     }
 });
 </script>
+
+<style scoped>
+
+/* ==============================
+   FORZAR COLOR ROJO INSTITUCIONAL
+   ============================== */
+
+/* Subtítulo */
+.tp-section-3-subtitle {
+  color: #b00020 !important;
+}
+
+/* Título principal */
+.tp-section-3-title {
+  color: #111 !important;
+}
+
+/* Parte resaltada (IESTP) */
+.tp-section-3-title span {
+  color: #b00020 !important;
+}
+
+/* Línea decorativa SVG */
+.tp-section-3-title svg {
+  fill: #b00020 !important;
+  stroke: #b00020 !important;
+}
+
+/* Título de cada testimonio */
+.tp-testimonial-6-item-title {
+  color: #b00020 !important;
+}
+
+/* Nombre del estudiante */
+.tp-testimonial-6-item-user-content p {
+  color: #b00020 !important;
+  font-weight: 600;
+}
+
+/* Si algún texto hereda azul del theme */
+.color-9 {
+  color: #b00020 !important;
+}
+
+</style>

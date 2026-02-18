@@ -30,29 +30,35 @@ withDefaults(defineProps<{bg?: boolean; top_cls?: string; custom_container?: str
 const funFacts = [
     {
         id: 1,
-        title: "Flexible classes",
-        description: "You pick schedule.",
+        title: "Inicio",
+        description: "23 de marzo 2026",
         icon: '/images/icon/funfact/funfact-2-icon-1.svg',
     },
     {
         id: 2,
-        title: "Offline mode",
-        description: "Download classes.",
+        title: "Turno",
+        description: "Mañana / 8:00 - 13:00 hrs",
         icon: '/images/icon/funfact/funfact-2-icon-2.svg',
         cls: "tp-funfact-item-2",
     },
     {
         id: 3,
-        title: "10k online courses",
-        description: "Explore fresh topics.",
+        title: "Modalidad",
+        description: "Presencial",
         icon: '/images/icon/funfact/funfact-2-icon-3.svg',
         cls: "tp-funfact-item-3",
     },
     {
         id: 4,
-        title: "Educator help",
-        description: "Always get answers.",
+        title: "duración",
+        description: "3 años",
         icon: '/images/icon/funfact/funfact-2-icon-4.svg',
     },
 ];
 </script>
+
+<style scoped>
+.tp-team-2-social-icon {
+  background: #e53935 !important;
+}
+</style>

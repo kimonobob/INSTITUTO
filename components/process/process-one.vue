@@ -85,23 +85,23 @@ const processData = [
     {
         id: 1,
         borderCls: "pink-border",
-        icon: '/images/icon/process/process-icon-1.svg',
-        title: "We care about kids",
-        description: "Lorem ipsum dolor sit amet, mea ei viderer probatus.",
+        icon: '/images/icon/process/e.png',
+        title: "Fundamentos Contables y Gestión Empresarial",
+        description: "El estudiante desarrolla las bases de la contabilidad, la gestión administrativa y la normativa tributaria, comprendiendo el registro y control de las operaciones financieras de una organización.",
     },
     {
         id: 2,
         borderCls: "gblue-border",
-        icon: '/images/icon/process/process-icon-2.svg',
-        title: "Building life-long learners",
-        description: "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur.",
+        icon: '/images/icon/process/ii.png',
+        title: "Contabilidad Aplicada y Gestión del Sector Público",
+        description: "Se profundiza en la aplicación práctica de la contabilidad en el ámbito empresarial y público, fortaleciendo competencias en costos, presupuestos, tributación y uso de herramientas informáticas contables.",
     },
     {
         id: 3,
         borderCls: "lyellow-border",
-        icon: '/images/icon/process/process-icon-3.svg',
-        title: "Helping struggling students",
-        description: "Lorem ipsum dolor sit amet, mea ei viderer probatus consequuntur.",
+        icon: '/images/icon/process/iii.png',
+        title: "Gestión Financiera, Auditoría y Evaluación de Proyectos",
+        description: "El estudiante consolida su formación en análisis financiero, auditoría y formulación de proyectos, preparándose para la toma de decisiones y el ejercicio profesional responsable.",
     }
 ];
 </script>

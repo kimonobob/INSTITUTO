@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <div class="tp-campus-life-title-wrap text-center wow fadeInUp" data-wow-delay=".3s">
                     <div class="tp-campus-choose-btn">
-                    <p>LIFE ON CAMPUS</p>
+                    <p>Formación Profesional Integral</p>
                     <a href="#down2"><span>
                         <svg width="20" height="80" viewBox="0 0 20 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.0001 0.00111022L10.115 80.0071" stroke="currentColor" stroke-miterlimit="10"/>
@@ -14,8 +14,8 @@
                         </svg>
                     </span></a>
                     </div>
-                    <h3 class="tp-campus-life-title">Together, we grow in mind, body, spirit <br>
-                    and character.</h3>
+                    <h3 class="tp-campus-life-title">Educación técnica orientada al desarrollo <br>
+                    profesional y al compromiso social.</h3>
                 </div>
             </div>
         </div>

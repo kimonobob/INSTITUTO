@@ -4,7 +4,7 @@
             <a href="#" id="header-bottom__lang-toggle" @click.prevent="toggleLangMenu">
                 <span>
                     <img src="/images/flag/flag-1.png" alt="flag-img" />
-                    English
+                    Español
                 </span>
                 <span>
                     <svg-arrow-down />

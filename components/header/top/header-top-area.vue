@@ -6,13 +6,13 @@
                     <div
                         class="tp-heder-info d-flex justify-content-center justify-content-lg-start align-items-center">
                         <div class="tp-header-info-item d-none d-md-block">
-                            <span><a href="#"><i class="fa-brands fa-facebook-f"></i></a>7500k Followers</span>
+                            <span><a href="https://www.facebook.com/iestpayaviri.informa?locale=es_LA"><i class="fa-brands fa-facebook-f"></i></a>IESTPAyaviri-Informa</span>
                         </div>
                         <div class="tp-header-info-item">
                             <span>
-                                <a href="tel:0123456789">
+                                <a href="http://wa.me/51904536741">
                                     <i><img src="/images/icon/calling.svg" alt="phone-img"></i>
-                                    +(402) 763 282 46
+                                    +(51) 904 536 741
                                 </a>
                             </span>
                         </div>
@@ -25,11 +25,11 @@
                 </div>
                 <div class="col-lg-6 col-md-6 d-none d-lg-block">
                     <div class="tp-header-right-list d-flex justify-content-md-end">
-                        <a href="#">Campus</a>
-                        <a href="#">Students</a>
-                        <a href="#"> Staffs</a>
-                        <a href="#"> Alumni </a>
-                        <a href="#">Help Desk</a>
+                        <a href="https://sga.iestpayaviri.edu.pe/tramite_documentario/registrar">Mesa de partes</a>
+                        <a href="https://bolsa-laboral.iestpayaviri.edu.pe/">Bolsa laboral</a>
+                        <a href="https://sga.iestpayaviri.edu.pe/"> Gestión académica</a>
+                        <a href="https://ayaviri.bibliotecalatina.com/login">Biblioteca virtual</a>
+                        <a href="https://eva.iestpayaviri.edu.pe/login/index.php">Aula virtual</a>
                     </div>
                 </div>
             </div>

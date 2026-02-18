@@ -8,6 +8,8 @@
                 <img src="/images/our-mission/thumb-2-shape.jpg" alt="">
             </div>
         </div>
+<h2 class="egresados-simple text-center">Nuestros Egresados</h2>
+
         <div class="tp-about-year-plr tp-about-year-nav">
             <Carousel v-bind="thumbnailsConfig" v-model="currentSlide" class="slider slider-nav">
                 <Slide v-for="item in about_years" :key="item.id" @click="slideTo(item.id - 1)">
@@ -51,44 +53,44 @@ const carouselRef = ref<InstanceType<typeof Carousel> | null>(null);
 const slideTo = (nextSlide: number) => (currentSlide.value = nextSlide);
 
 // years
-const about_years = [{id:1, year:1996}, {id:2, year:2005}, {id:3, year:2012}, {id:4, year:2000}, {id:5, year:2023}];
+const about_years = [{id:1, year:2023}, {id:2, year:2022}, {id:3, year:2024}, {id:4, year:2025}, {id:5, year:2021}];
 
 // slider data 
 const slider_data = [
     {
         id: 1,
-        image: "/images/our-mission/thumb-2.jpg",
-        title: "15 New <br/> Courses Added",
+        image: "/images/our-mission/e1.png",
+        title: "Mi Experiencia <br/> Profesional",
         description:
-            "Etiam quis sapien in orci feugiat suscipit quis eget risus. Morbi in dapibus magna, et congue tortor. Students loved the system, but the teachers struggled to manage the paperwork and manual tracking.",
+            "Gracias a la formación recibida, hoy me desempeño en el área contable de una empresa privada. La base técnica y el enfoque práctico del instituto fueron clave para insertarme rápidamente en el mercado laboral.",
     },
     {
         id: 2,
-        image: "/images/our-mission/thumb-3.jpg",
-        title: "8 New <br/> Courses Added",
+        image: "/images/our-mission/e2.png",
+        title: "Formación Que <br/> Marca la Diferencia",
         description:
-            "Etiam quis sapien in orci feugiat suscipit quis eget risus. Morbi in dapibus magna, et congue tortor. Students loved the system, but the teachers struggled to manage the paperwork and manual tracking.",
+            "Los conocimientos en tributación y finanzas me permitieron trabajar en un estudio contable desde el primer año de egreso. Destaco la calidad docente y el acompañamiento constante durante mi formación.",
     },
     {
         id: 3,
-        image: "/images/our-mission/thumb-4.jpg",
-        title: "10 New <br/> Courses Added",
+        image: "/images/our-mission/e3.png",
+        title: "Crecimiento <br/> y Desarrollo Profesional",
         description:
-            "Etiam quis sapien in orci feugiat suscipit quis eget risus. Morbi in dapibus magna, et congue tortor. Students loved the system, but the teachers struggled to manage the paperwork and manual tracking.",
+            "La preparación en contabilidad y análisis financiero me dio seguridad para asumir responsabilidades en el sector público. Hoy aplico lo aprendido con ética y compromiso profesional.",
     },
     {
         id: 4,
-        image: "/images/our-mission/thumb-3.jpg",
-        title: "8 New <br/> Courses Added",
+        image: "/images/our-mission/e4.png",
+        title: "Aprendizaje <br/> Aplicado a la Realidad",
         description:
-            "Etiam quis sapien in orci feugiat suscipit quis eget risus. Morbi in dapibus magna, et congue tortor. Students loved the system, but the teachers struggled to manage the paperwork and manual tracking.",
+            "La enseñanza práctica y el uso de herramientas informáticas contables facilitaron mi desempeño laboral. Actualmente trabajo en el área financiera de una empresa regional.La enseñanza práctica y el uso de herramientas informáticas contables facilitaron mi desempeño laboral. Actualmente trabajo en el área financiera de una empresa regional.",
     },
     {
         id: 5,
-        image: "/images/our-mission/thumb-2.jpg",
-        title: "15 New <br/> Courses Added",
+        image: "/images/our-mission/e5.png",
+        title: "Impulso Para <br/> Emprender",
         description:
-            "Etiam quis sapien in orci feugiat suscipit quis eget risus. Morbi in dapibus magna, et congue tortor. Students loved the system, but the teachers struggled to manage the paperwork and manual tracking.",
+            "El instituto no solo me brindó conocimientos técnicos, sino también confianza para ejercer de manera independiente. Hoy ofrezco servicios contables a pequeñas empresas y emprendedores.",
     },
 ];
 
@@ -117,4 +119,21 @@ const thumbnailsConfig = {
         },
     },
 };
+
 </script>
+
+
+<style scoped>
+.egresados-simple{
+  position: absolute;
+  top: 40px;              /* más arriba */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 78px;        /* más grande */
+  font-weight: 900;
+  color: #ffffff;         /* blanco */
+  margin: 0;
+  z-index: 10;
+  text-align: center;
+}
+</style>

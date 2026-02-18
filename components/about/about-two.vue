@@ -5,23 +5,27 @@
                 <div class="col-12">
                     <div class="tp-about-4-wrapper mb-75 wow fadeInUp" data-wow-delay=".3s">
                         <h2 class="tp-about-4-head">
-                            Our goal is to develop and meet the needs of each child so that he or
-                            she becomes a well-rounded tomorrow individual.
+                            Formamos profesionales técnicos con excelencia académica y compromiso con el desarrollo regional.
                         </h2>
                         <div class="tp-about-4-btn wow fadeInUp" data-wow-delay=".5s">
-                            <nuxt-link class="tp-btn-3" href="/university-about">Why Choose Acadia</nuxt-link>
+                            <nuxt-link class="tp-btn-3" href="/university-about">¿Por qué elegir el IESTP Ayaviri?</nuxt-link>
+                    
                             <div class="tp-about-4-video">
-                                <a @click.prevent="playVideo('_RpLvsA1SNM')" class="popup-video" href="#">
-                                    <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14"
-                                            viewBox="0 0 12 14" fill="none">
-                                            <path d="M12 7.00012L0 0.0719185L0 13.9283L12 7.00012Z"
-                                                fill="currentColor" />
-                                        </svg>
-                                    </span>
-                                </a>
-                                <span>Play Video</span>
+                                <a 
+                                href="https://www.youtube.com/watch?v=ghT8VrLuxTE" 
+                                target="_blank"
+                                class="popup-video">
+                                <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14"
+                                    viewBox="0 0 12 14" fill="none">
+                                    <path d="M12 7.00012L0 0.0719185L0 13.9283L12 7.00012Z"
+                                    fill="currentColor" />
+                                </svg>
+                                </span>
+                            </a>
+                            <span>Ver Video Institucional</span>
                             </div>
+
                         </div>
                     </div>
                 </div>

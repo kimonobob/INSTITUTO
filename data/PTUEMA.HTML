@@ -1,0 +1,35 @@
+<!-- Dentro de <div class="main-menu text-end"> o donde esté el menú -->
+<nav class="tp-main-menu">
+  <ul>
+    <li><nuxt-link to="/">Inicio</nuxt-link></li>
+    
+    <li class="has-dropdown">
+      <nuxt-link to="/nosotros">Nosotros</nuxt-link>
+      <ul class="tp-submenu">
+        <li><nuxt-link to="/mision-vision">Misión y Visión</nuxt-link></li>
+        <li><nuxt-link to="/historia">Historia</nuxt-link></li>
+        <li><nuxt-link to="/autoridades">Autoridades</nuxt-link></li>
+      </ul>
+    </li>
+    
+    <li class="has-dropdown">
+      <nuxt-link to="/carreras">Carreras</nuxt-link>
+      <ul class="tp-submenu">
+        <li><nuxt-link to="/carrera-industrial">Ingeniería Industrial</nuxt-link></li>
+        <li><nuxt-link to="/carrera-informatica">Computación e Informática</nuxt-link></li>
+        <!-- Agrega las tuyas -->
+      </ul>
+    </li>
+    
+    <li class="has-dropdown">
+      <nuxt-link to="/admision">Admisión</nuxt-link>
+      <ul class="tp-submenu">
+        <li><nuxt-link to="/requisitos">Requisitos</nuxt-link></li>
+        <li><nuxt-link to="/proceso-matricula">Proceso de Matrícula</nuxt-link></li>
+      </ul>
+    </li>
+    
+    <li><nuxt-link to="/noticias">Noticias</nuxt-link></li>
+    <li><nuxt-link to="/contacto">Contacto</nuxt-link></li>
+  </ul>
+</nav>

@@ -3,105 +3,66 @@ import {type IMenu, type IMenuDT2 } from "@/types/menu-d-t";
 const menu_data:IMenu[] = [
     {
         id:1,
-        title:'Home',
+        title:'Inicio',
         link:'#',
         home_dropdown:[
-            { id: 1, title: "University Classic", link: "/", img: "/images/menu/home-1.jpg" },
-			{ id: 2, title: "Online Course", link: "/home-online-course", img: "/images/menu/home-2.jpg" },
-			{ id: 3, title: "Kids Education", link: "/home-kids-education", img: "/images/menu/home-3.jpg" },
-			{ id: 4, title: "Gym Coaching", link: "/home-gym-coaching", img: "/images/menu/home-4.jpg" },
-			{ id: 5, title: "High School", link: "/home-high-school", img: "/images/menu/home-5.jpg" },
-			{ id: 6, title: "Books Shop", link: "/home-books-shop", img: "/images/menu/shop.jpg" },
-			{ id: 7, title: "Online Academy", link: "/home-online-academy", img: "/images/menu/home-6.jpg" },
-			{ id: 8, title: "Course Hub", link: "/home-course-hub", img: "/images/menu/home-7.jpg" },
+            { id: 1, title: "Inicio", link: "/", img: "/images/menu/home-1.jpg" },
+			{ id: 2, title: "Aula virtual", link: "https://eva.iestpayaviri.edu.pe/login/index.php", img: "/images/menu/home-2.jpg" },
+			{ id: 3, title: "Biblioteca virtual", link: "https://ayaviri.bibliotecalatina.com/login", img: "/images/menu/home-3.jpg" },
+			{ id: 4, title: "Gestión académica", link: "https://sga.iestpayaviri.edu.pe/", img: "/images/menu/home-4.jpg" },
+			{ id: 5, title: "Bolsa laboral", link: "https://bolsa-laboral.iestpayaviri.edu.pe/", img: "/images/menu/home-5.jpg" },
+			{ id: 6, title: "Mesa de partes", link: "https://sga.iestpayaviri.edu.pe/tramite_documentario/registrar", img: "/images/menu/home-6.jpg" },
         ]
      },
 	 {
 		id:2,
-		title:'Academics',
+		title:'Programas de estudio',
 		link:'#',
 		sm_mega_menus:[
-			{ id: 1, title: "Overview", link: "/university-admission-overview" },
-			{ id: 2, title: "Undergraduate", link: "/university-program" },
-			{ id: 3, title: "Graduate Program", link: "/university-program" },
-			{ id: 4, title: "Schools", link: "/university-program" },
-			{ id: 5, title: "Online Education", link: "/course-with-filter" },
-			{ id: 6, title: "Off-campus learning", link: "/course-with-filter" },
-			{ id: 7, title: "Faculty", link: "/university-leadership" },
+			{ id: 1, title: "Contabilidad", link: "/contabilidad" },
+			{ id: 2, title: "Enfermería Técnica", link: "/enfermeria-tecnica" },
+			{ id: 3, title: "Producción Agropecuaria", link: "/produccion-agropecuaria" },
+			{ id: 4, title: "Industrias Alimentarias", link: "/industrias-alimentarias" },
+			{ id: 5, title: "Arquitectura de Plataformas y Servicios de Tecnologías de Información", link: "/arquitectura-de-plataformas" },
 		]
 	 },
 	 {
 		id:3,
-		title:'Admissions',
+		title:'Admisión',
 		link:'#',
 		dropdown_menus:[
-			{id:1,title:"Overview", link: "/university-admission-overview" },
-			{id:2,title:"How to Apply", link: "/university-apply" },
-			{id:3,title:"Tuition & Fees", link: "/university-tuition-fees" },
-			{id:4,title:"Financial Aid", link: "/university-financial" },
-			{id:5,title:"Dates & Deadlines", link: "/university-deadlines" },
-			{id:6,title:"Schedule a Tour", link: "/university-schedule" },
+			{id:1,title:"Información General", link: "/university-admission-overview" },
+			{id:2,title:"Proceso de Admisión", link: "/university-apply" },
+			{id:3,title:"Tasas Educativas", link: "/university-tuition-fees" },
+			{id:4,title:"Becas y Beneficios", link: "/university-financial" },
+			{id:5,title:"Cronograma de Admisión", link: "/university-deadlines" },
+			{id:6,title:"Solicitar Información", link: "/university-schedule" },
 		]
 	 },
 	 {
-		id:4,
-		title:'Pages',
+		id:3,
+		title:'La institución',
 		link:'#',
-		pages_dropdown:[
-			{
-				id:1,
-				title: "About",
-				dropdown_menus: [
-					{id:1, title: "About Us", link: "/about" },
-					{id:2, title: "University About", link: "/university-about" },
-					{id:3, title: "Campus", link: "/university-campus" },
-					{id:4, title: "Mission & Values", link: "/university-mission" },
-					{id:5, title: "History", link: "/university-history" },
-					{id:6, title: "Our Leadership", link: "/university-leadership" },
-				],
-			},
-			{
-				id:2,
-				title: "Get Started",
-				dropdown_menus: [
-					{id:1, title: "Events", link: "/event" },
-					{id:2, title: "Event Details", link: "/event-details/1" },
-					{id:3, title: "Instructor", link: "/instructor" },
-					{id:4, title: "Profile", link: "/my-profile" },
-					{id:5, title: "Become a Instructor", link: "/become-instructor" },
-					{id:6, title: "Maintenance", link: "/up-coming" },
-					{id:7, title: "Contact Us", link: "/contact" },
-					{id:8, title: "Membership plans", link: "/membership-plans" },
-					{id:9, title: "FAQs", link: "/faq" },
-					{id:10, title: "Privacy Policy", link: "/privacy-policy" },
-					{id:11, title: "404 Page", link: "/not-found" },
-				],
-			},
-			{
-				id:3,
-				title:'Shop',
-				dropdown_menus: [
-					{id:1,title:"Shop", link: "/shop-grid" },
-					{id:2,title:"Single Product", link: "/shop-details/1" },
-					{id:3,title:"Cart Page", link: "/cart" },
-					{id:4,title:"Wishlist page", link: "/wishlist" },
-					{id:5,title:"My Account", link: "/my-account" },
-					{id:6,title:"Login & Register", link: "/login" },
-				]
-			}
+		dropdown_menus:[
+			{id:1, title: "Sobre nosotros", link: "/nosotros" },
+			{id:2, title: "Autoridades", link: "/university-about" },
+			{id:3, title: "Plana Docente", link: "/university-leadership" },
+			{id:4, title: "Sede Institucional", link: "/university-campus" },
+			{id:5, title: "Misión, Visión y Valores", link: "/university-mission" },
+			{id:6, title: "Reseña Histórica", link: "/university-history" },
 		]
 	 },
 	 {
 		id:5,
-		title:'Blog',
+		title:'Transparencia',
 		link:'#',
 		dropdown_menus:[
-			{id:1,title:"Blog 3 Column", link:"/blog-stories" },
-			{id:2,title:"Blog Grid Sidebar", link:"/blog-stories-sidebar" },
-			{id:3,title:"Blog List Sidebar", link:"/blog-list" },
-			{id:4,title:"Blog Standard", link:"/blog-standard" },
-			{id:5,title:"Blog Details", link:"/blog-details/1" },
-			{id:6,title:"Blog Details Full Width", link:"/blog-details-full-width/1" },
+			{id:1,title:"Documentos de Gestión", link:"/documentos-gestion" },
+			{id:2,title:"Inversiones y Recursos Económicos", link:"/inverisiones-recursos" },
+			{id:3,title:"Licenciamiento", link:"/licenciamiento" },
+			{id:4,title:"Estadísticas", link:"/estadisticas" },
+			{id:5,title:"Libro de Reclamaciones", link:"/libro-reclamaciones" },
+			{id:6,title:"TUPA", link:"tupa" },
 		]
 	 }
 ];

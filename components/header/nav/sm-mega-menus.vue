@@ -26,11 +26,11 @@
                             <img src="/images/cta/menu-cta-shape.png" alt="cta-shape" />
                         </div>
                         <h4 class="tp-megamenu-small-cta-title">
-                            All signature programs
+                            Nuestros programas
                         </h4>
                         <div class="tp-megamenu-small-cta-btn">
-                            <nuxt-link class="tp-btn" href="/university-application-form">
-                                Apply now
+                            <nuxt-link class="tp-btn" href="/preinscripcion">
+                                Admisión 2026
                             </nuxt-link>
                         </div>
                     </div>

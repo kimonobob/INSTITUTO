@@ -8,11 +8,11 @@
         <div id="header-sticky" :class="`tp-header-mob-space tp-header-1 ${isSticky ? 'tp-header-sticky' : ''}`">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-xxl-2 col-xl-2 col-lg-6 col-md-6 col-6">
+                    <div class="col-xxl- col-xl-2 col-lg-6 col-md-6 col-6">
                         <div class="tp-header-logo-1 tp-header-logo">
                             <nuxt-link href="/">
-                                <img class="logo-1" src="/images/logo/logo.png" alt="logo">
-                                <img class="logo-2" src="/images/logo/logo-black-1.png" alt="logo">
+                                <img class="logo-1" src="/images/logo/logo.png" alt="logo" style="width: 250px; height: auto;">
+                                <img class="logo-2" src="/images/logo/logo-black-1.png" alt="logo" style="width: 250px; height: auto;">
                             </nuxt-link>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                                 </button>
                             </div>
                             <div class="tp-header-btn d-none d-md-block ml-30">
-                                <nuxt-link href="/university-application-form">Apply Now </nuxt-link>
+                                <nuxt-link href="/university-application-form">Inscripciones</nuxt-link>
                             </div>
                             <div class="tp-header-bar d-xl-none ml-30">
                                 <button @click="handleOffcanvas" class="offcanvas-open-btn">

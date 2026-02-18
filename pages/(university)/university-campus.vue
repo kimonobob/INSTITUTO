@@ -11,16 +11,12 @@
             <!-- campus area end -->
 
             <!-- counter area start -->
-            <counter-five />
+            <counter-three />
             <!-- counter area end -->
 
             <!-- campus student area start -->
             <campus-student-area />
             <!-- campus student area end -->
-
-            <!-- campus activity area start -->
-            <campus-activity-area />
-            <!-- campus activity area end -->
 
             <!-- campus video area start -->
             <campus-video-area />

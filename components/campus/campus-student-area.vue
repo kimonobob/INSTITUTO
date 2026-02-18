@@ -9,9 +9,9 @@
             data-wow-delay=".3s"
           >
             <div class="tp-campus-student-heading text-center">
-              <h3 class="tp-campus-student-title">Student Life</h3>
+              <h3 class="tp-campus-student-title">Espacios Académicos</h3>
               <p>
-                Life at Acadia University is enriching, exciting, and energizing
+                Contamos con talleres, laboratorios y aulas diseñadas para una educación práctica y de calidad.
               </p>
             </div>
 
@@ -31,15 +31,7 @@
                     <div class="tp-campus-student-thumb">
                       <img :src="tab.imgSrc" :alt="tab.title" />
                     </div>
-                    <div class="tp-campus-student-item">
-                      <h4 class="tp-campus-student-item-title">
-                        {{ tab.title }}
-                      </h4>
-                      <p>{{ tab.description }}</p>
-                      <div class="tp-campus-student-item-thumb">
-                        <img :src="tab.thumbImgSrc" :alt="tab.title" />
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -84,29 +76,36 @@ import { ref } from "vue";
 const navData = ref([
   {
     id: "home",
-    title: "Housing & Dining",
+    title: "Contabilidad",
     ariaControls: "home",
     isActive: true,
   },
   {
     id: "profile",
-    title: "Student Clubs",
+    title: "Arquitectura de Plataformas y Servicios de TI",
     ariaControls: "profile",
     isActive: false,
   },
   {
     id: "contact",
-    title: "Arts & Culture",
+    title: "Enfermería Técnica",
     ariaControls: "contact",
     isActive: false,
   },
   {
     id: "Moscow",
-    title: "Moscow Campus",
+    title: "Industrias Alimentarias",
+    ariaControls: "Moscow",
+    isActive: false,
+  },
+  {
+    id: "Moscow",
+    title: "Producción Agropecuaria",
     ariaControls: "Moscow",
     isActive: false,
   },
 ]);
+
 
 const tabContentData = ref([
   {

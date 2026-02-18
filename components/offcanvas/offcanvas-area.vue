@@ -10,14 +10,14 @@
                 <div class="offcanvas__top mb-90 d-flex justify-content-between align-items-center">
                     <div class="offcanvas__logo tp-header-logo">
                         <NuxtLink to="/">
-                            <img src="/images/logo/logo-black.png" alt="logo" />
+                            <img src="/images/logo/logo-black.png" alt="logo" style="width: 250px; height: auto;">
                         </NuxtLink>
                     </div>
                 </div>
                 <div class="offcanvas-main">
                     <div class="offcanvas-content">
-                        <h3 class="offcanvas-title">Hello There!</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, </p>
+                        <h3 class="offcanvas-title">Bienvenidos</h3>
+                        <p>Comprometidos con la formación profesional <br /> y el desarrollo regional. </p>
                     </div>
 
                     <!-- Mobile menu -->
@@ -37,21 +37,21 @@
                         </div>
                     </div>
                     <div class="offcanvas-contact">
-                        <h3 class="offcanvas-title sm">Information</h3>
+                        <h3 class="offcanvas-title sm">Información</h3>
                         <ul>
-                            <li><a href="tel:1245654">+ 4 20 7700 1007</a></li>
-                            <li><a href="mailto:hello@acadia.com">hello@acadia.com</a></li>
-                            <li><a href="#">Avenue de Roma 158b, Lisboa</a></li>
+                            <li><a href="tel:1245654">+51 904 536 741</a></li>
+                            <li><a href="mailto:hello@acadia.com"> info@iestpayaviri.edu.pe</a></li>
+                            <li><a href="#">Ubicación: Av. Circunvalación N° 142 A.H. Pueblo Libre - Ayaviri</a></li>
                         </ul>
                     </div>
                     <div class="offcanvas-social">
-                        <h3 class="offcanvas-title sm">Follow Us</h3>
+                        <h3 class="offcanvas-title sm">Síguenos en</h3>
                         <ul>
                             <li>
                                 <a href="#"><svg-social-instagram /></a>
                             </li>
                             <li>
-                                <a href="#"><svg-social-dribble /></a>
+                                <a href="#"><svg-social-facebook/></a>
                             </li>
                             <li>
                                 <a href="#"><svg-social-behance /></a>

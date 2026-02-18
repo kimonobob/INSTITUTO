@@ -10,7 +10,7 @@
                 </div>
                 <div class="tp-leadership-btn">
                     <nuxt-link to="/my-profile">
-                        Details
+                        Información
                         <span>
                             <svg-up-arrow-two />
                         </span>

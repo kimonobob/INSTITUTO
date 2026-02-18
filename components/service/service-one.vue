@@ -30,8 +30,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tp-service-all text-center">
-                        <span>Trusted by the worlds 
-                            <nuxt-link href="/university-about">Best University
+                        <span>Con la confianza de 
+                            <nuxt-link href="https://www.pucp.edu.pe/">PUCP
                                 <svg-arrow-right-sm-two />
                             </nuxt-link>
                         </span>
@@ -53,26 +53,26 @@ const service_data = [
     {
         id: 1,
         icon: '/images/icon/service/service-icon-1.svg',
-        title: "Why study at <br/> Acadia?",
-        text: "We have students coming from different backgrounds,cultures, & nationalities as well.",
+        title: "¿Por qué estudiar <br/> en el IESTP Ayaviri?",
+        text: "Técnicos listos para trabajar en Puno y más allá. Laboratorios reales y profesores con experiencia.",
     },
     {
         id: 2,
         icon: '/images/icon/service/service-icon-2.svg',
-        title: "Certification <br/> Guarantee",
-        text: "We have students coming from different backgrounds,cultures, & nationalities as well.",
+        title: "Nuestro <br/> licenciamiento",
+        text: "Título oficial del MINEDU + certificados por competencias. Reconocido en todo el Perú.",
     },
     {
         id: 3,
         icon: '/images/icon/service/service-icon-3.svg',
-        title: "Graduate <br/> Admissions",
-        text: "We have students coming from different backgrounds,cultures, & nationalities as well.",
+        title: "Nuestros <br/> Graduados",
+        text: "Más de 500 egresados trabajando en mineras, empresas y emprendiendo en la región.",
     },
     {
         id: 4,
         icon: '/images/icon/service/service-icon-4.svg',
-        title: "Scholarships <br/> & fees",
-        text: "We have students coming from different backgrounds,cultures, & nationalities as well.",
+        title: "Plana <br/> Docente",
+        text: "Profesores calificados y con experiencia laboral real. Siempre dispuestos a guiarte.",
     },
 ];
 </script>

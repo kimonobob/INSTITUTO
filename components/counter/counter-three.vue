@@ -20,9 +20,9 @@
 
 <script setup lang="ts">
 const counterData = [
-    { end: 10, label: "Students", suffix: "k" },
-    { end: 300, label: "Professors" },
-    { end: 48, label: "Programs" },
-    { end: 2, label: "Research", suffix: "k" },
+    { end: 10, label: "Estudiantes", suffix: "" },
+    { end: 24, label: "Docentes" },
+    { end: 5, label: "Programas" },
+    { end: 19500, label: "Egresados", suffix: "" },
 ];
 </script>

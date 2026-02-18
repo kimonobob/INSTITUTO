@@ -5,7 +5,7 @@
                 <div class="col-lg-12">
                     <div class="tp-campus-choose-wrapper text-center">
                         <div class="tp-campus-choose-btn wow fadeInUp" data-wow-delay=".3s">
-                            <p>CAMPUS HIGHLIGHTS</p>
+                            <p>SEDE INSTITUCIONAL</p>
                             <a href="#down">
                                 <span>
                                     <svg-arrow-down-four />
@@ -13,9 +13,8 @@
                             </a>
                         </div>
                         <div class="tp-campus-choose-content mb-10 wow fadeInUp" data-wow-delay=".5s">
-                            <h2 class="tp-campus-choose-title">Our goal is to develop and meet the needs <br> of each
-                                child so that he or she becomes a <br> well-rounded tomorrow individual.</h2>
-                            <nuxt-link class="tp-btn" href="/university-about">Why Choose Acadia </nuxt-link>
+                            <h2 class="tp-campus-choose-title">Contamos con ambientes equipados y recursos <br> que fortalecen la formación académica y profesional <br> de nuestra comunidad educativa.</h2>
+                            <nuxt-link class="tp-btn" href="/university-about">¿Por qué elegirnos? </nuxt-link>
                         </div>
                     </div>
                 </div>

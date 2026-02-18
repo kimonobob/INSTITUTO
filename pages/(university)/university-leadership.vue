@@ -3,7 +3,7 @@
         <nuxt-layout name="layout-eight">
 
             <!-- breadcrumb area start -->
-            <breadcrumb-one title="Our Leadership" subtitle="Our Leadership" />
+            <breadcrumb-one title="Nuestra Plana Docente" subtitle="Conoce a" />
             <!-- breadcrumb area end -->
 
             <!-- leadership area start -->
@@ -13,7 +13,7 @@
                         <div class="col-lg-12">
                             <search-leadership />
                         </div>
-                    </div>
+                    </div>            
                     <div class="row">
                         <div v-for="(item, i) in leadership_data" :key="item.id"
                             class="col-xl-3 col-lg-4 col-sm-6 wow fadeInUp"

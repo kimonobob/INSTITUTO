@@ -6,7 +6,7 @@
                   <div class="col-xxl-2 col-xl-2 col-6">
                      <div class="tp-header-logo">
                         <nuxt-link href="/">
-                           <img src="/images/logo/logo-breadcrumb.png" alt="logo">
+                           <img src="/images/logo/logo-breadcrumb.png" alt="logo" style="width: 180px; height: auto;">
                         </nuxt-link>
                      </div>
                   </div>
@@ -25,7 +25,7 @@
                            </button>
                         </div>
                         <div class="tp-header-inner-btn d-none d-md-block">
-                           <nuxt-link class="tp-btn-3" href="/university-schedule">Plan a Visit</nuxt-link>
+                           <nuxt-link class="tp-btn-3" href="/preinscripcion">Inscripción</nuxt-link>
                         </div>
                         <div class="tp-header-red-sidebar">
                            <button @click="handleOffcanvas" class="offcanvas-open-btn">

@@ -15,23 +15,23 @@
             <!-- about area end -->
 
             <!-- counter area start -->
-            <counter-one />
+            <counter-three />
             <!-- counter area end -->
 
             <!-- program area start -->
-            <program-one />
+            <plan-area />
             <!-- program area end -->
 
             <!-- event area start -->
-            <event-one />
+            <brand-area spacing="pt-120 pb-120"/>
             <!-- event area end -->
-
+          
             <!-- testimonial area start -->
-            <testimonial-one />
+            <testimonial-three />
             <!-- testimonial area end -->
 
             <!-- blog area start -->
-            <blog-one />
+            <blog-three />
             <!-- blog area end -->
 
             <!-- instagram area start -->
@@ -50,5 +50,5 @@
 definePageMeta({
     layout: false,
 });
-useSeoMeta({ title: "Acadia - University & Online Course vue nuxt Template" });
+useSeoMeta({ title: "INSTITUTO DE EDUCACIÓN SUPERIOR TECNOLÓGICO PÚBLICO AYAVIRI" });
 </script>

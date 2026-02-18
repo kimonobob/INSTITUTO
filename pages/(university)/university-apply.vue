@@ -3,7 +3,7 @@
         <nuxt-layout name="layout-eight">
 
             <!-- breadcrumb area start -->
-            <breadcrumb-one title="How to Apply" subtitle="How to Apply" :admission="true" />
+            <breadcrumb-one title="Proceso de Admisión" subtitle="Admisión" :admission="true" />
             <!-- breadcrumb area end -->
 
             <!-- campus area start -->
@@ -27,11 +27,9 @@
             <!-- process area start -->
             <process-two />
             <!-- process area end -->
+ <program-three />
 
-            <!-- requirement area start -->
-             <requirement-apply-area />
-            <!-- requirement area end -->
-
+             <cta-one />
         </nuxt-layout>
     </div>
 </template>

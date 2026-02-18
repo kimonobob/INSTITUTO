@@ -1,6 +1,6 @@
 <template>
     <section class="tp-hero-area">
-        <swiper :modules="[EffectFade, Autoplay]" :slides-per-view="1" effect="fade" :autoplay="{ delay: 3500 }" class="swiper tp-slider-active">
+        <swiper :modules="[EffectFade, Autoplay]" :slides-per-view="1" effect="fade" :autoplay="{ delay: 6500 }" class="swiper tp-slider-active">
             <swiper-slide v-for="slider in heroSliderData" :key="slider.id">
                 <div class="tp-hero-item">
                     <div class="container">
@@ -10,8 +10,8 @@
                                     <span class="tp-hero-subtitle">{{ slider.subtitle }}</span>
                                     <h2 class="tp-hero-title">{{ slider.title }}</h2>
                                     <div class="tp-hero-btn">
-                                        <nuxt-link class="tp-btn" href="/university-program">
-                                            Enroll Now
+                                        <nuxt-link class="tp-btn" href="/university-schedule">
+                                            Inscribete ahora
                                             <span>
                                                 <svg-arrow-right-one />
                                             </span>
@@ -36,20 +36,20 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 const heroSliderData = [
     {
         id: 1,
-        subtitle: "Be apart of our history",
-        title: "Landmark to Create the Future.",
+        subtitle: "CALIDAD EDUCATIVA",
+        title: "44 Años de trayectoria",
         bgImg: "/images/hero/hero-bg-1.jpg",
     },
     {
         id: 2,
-        subtitle: "Be apart of our history",
-        title: "Education to Create the Future.",
+        subtitle: "CALIDAD EDUCATIVA",
+        title: "Formamos técnicos que Puno necesita",
         bgImg: "/images/hero/hero-bg-2.jpg",
     },
     {
         id: 3,
-        subtitle: "Be apart of our history",
-        title: "Discipline to Create the Future.",
+        subtitle: "CALIDAD EDUCATIVA",
+        title: "Tu Camino al Éxito Técnico Comienza Aquí",
         bgImg: "/images/hero/hero-bg-3.jpg",
     },
 ];

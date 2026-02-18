@@ -36,26 +36,26 @@ const funFacts = [
     {
         id: 1,
         icon: '/images/icon/funfact/funfact-2-icon-1.svg',
-        title: "Flexible classes",
-        description: "You pick schedule.",
+        title: "Horarios Flexibles",
+        description: "Turnos disponibles según programa académico.",
     },
     {
         id: 2,
         icon: '/images/icon/funfact/funfact-2-icon-2.svg',
-        title: "Offline mode",
-        description: "Download classes.",
+        title: "Modalidad Presencial",
+        description: "Formación práctica en aulas y talleres equipados.",
     },
     {
         id: 3,
         icon: '/images/icon/funfact/funfact-2-icon-3.svg',
-        title: "10k online courses",
-        description: "Explore fresh topics.",
+        title: "Programas Actualizados",
+        description: "Programas orientados al mercado laboral.",
     },
     {
         id: 4,
         icon: '/images/icon/funfact/funfact-2-icon-4.svg',
-        title: "Educator help",
-        description: "Always get answers.",
+        title: "Acompañamiento Docente",
+        description: "Orientación permanente de profesionales especializados.",
     },
 ];
 </script>

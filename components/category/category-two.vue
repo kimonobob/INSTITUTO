@@ -4,8 +4,8 @@
             <div class="row justify-content-center">
                 <div class="col-xl-8 col-lg-10">
                     <div class="tp-section text-center mb-65">
-                        <h5 class="tp-section-5-subtitle mb-10">Unique Categories</h5>
-                        <h3 class="tp-section-5-title">Browse by Categories</h3>
+                        <h5 class="tp-section-5-subtitle mb-10">ÁREAS DE DESEMPEÑO</h5>
+                        <h3 class="tp-section-5-title">Campo Laboral</h3>
                     </div>
                 </div>
             </div>
@@ -18,10 +18,8 @@
                         </div>
                         <div class="tp-category-5-content">
                             <h4 class="tp-category-5-title">
-                                <nuxt-link href="/course-with-filter">{{ item.title }}
-                                    <span>
-                                        <svg-arrow-right-one clr="currentColor" />
-                                    </span>
+                                <nuxt-link href="">{{ item.title }}
+                                   
                                 </nuxt-link>
                             </h4>
                         </div>
@@ -37,43 +35,43 @@
 const category_data = [
     {
         id: 1,
-        image: "/images/category/category-5-thumb-1.jpg",
-        title: "Strength Training",
+        image: "/images/category/lc1.png",
+        title: "Estudios contables",
     },
     {
         id: 2,
-        image: "/images/category/category-5-thumb-2.jpg",
-        title: "Functional Fitness",
+        image: "/images/category/lc2.png",
+        title: "Empresas Privadas",
     },
     {
         id: 3,
-        image: "/images/category/category-5-thumb-3.jpg",
-        title: "Powerful and Strong",
+        image: "/images/category/lc3.png",
+        title: "Consultoría Financiera",
     },
     {
         id: 4,
-        image: "/images/category/category-5-thumb-4.jpg",
-        title: "Youth & Teen Fitness",
+        image: "/images/category/lc4.png",
+        title: "Bancos y Finanzas",
     },
     {
         id: 5,
-        image: "/images/category/category-5-thumb-5.jpg",
-        title: "Online Coaching",
+        image: "/images/category/lc5.png",
+        title: "Sector Público",
     },
     {
         id: 6,
-        image: "/images/category/category-5-thumb-6.jpg",
-        title: "Core & Flexibility",
+        image: "/images/category/lc6.png",
+        title: "Auditoría Interna",
     },
     {
         id: 7,
-        image: "/images/category/category-5-thumb-7.jpg",
-        title: "Mind-Body Balance",
+        image: "/images/category/lc7.png",
+        title: "Empresas de Seguros",
     },
     {
         id: 8,
-        image: "/images/category/category-5-thumb-8.jpg",
-        title: "Mind-Body Balance",
+        image: "/images/category/lc8.png",
+        title: "Profesional Independiente",
     },
 ];
 </script>

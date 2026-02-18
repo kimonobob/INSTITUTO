@@ -2,7 +2,7 @@
     <section class="tp-breadcrumb__area pt-160 pb-150 p-relative z-index-1 fix">
       <div
         class="tp-breadcrumb__bg overlay"
-        :style="{ backgroundImage: 'url(/images/breadcrumb/campus-breadcrumb.jpg)' }"
+        :style="{ backgroundImage: 'url(/images/breadcrumb/contaportada.jpeg)' }"
       ></div>
       <div class="container">
         <div class="row align-items-center">
@@ -14,7 +14,7 @@
                     <svg-home />
                   </nuxt-link>
                 </span>
-                <span v-if="admission" class="white">Admission</span>
+              
                 <span class="white">{{ subtitle }}</span>
               </div>
               <h3 class="tp-breadcrumb__title color">

@@ -3,12 +3,14 @@
         <nuxt-layout name="layout-eight">
 
             <!-- breadcrumb area start -->
-            <breadcrumb-one title="Dates & Deadlines" subtitle="Dates & Deadlines" :admission="true" />
+            <breadcrumb-one title="Cronograma de admisión" subtitle="Admisión" :admission="true" />
             <!-- breadcrumb area end -->
 
             <!-- deadline area start -->
             <deadline-area />
             <!-- deadline area end -->
+
+<program-three />
 
         </nuxt-layout>
     </div>

@@ -5,12 +5,12 @@
                 <div class="col-lg-12">
                     <div class="tp-campus-choose-wrapper text-center">
                         <div class="tp-campus-choose-btn">
-                            <p>Mission and values</p>
+                            <p>Misión y valores</p>
                             <div class="tp-campus-choose-content mb-10">
                                 <h2 class="tp-campus-choose-title">
-                                    The Ecadia University prepare you to <br />
-                                    launch your career by providing a supportive, <br />
-                                    creative, and professional.
+                                    Formamos profesionales técnicos <br />
+                                    con calidad, ética y compromiso con <br />
+                                    el desarrollo de nuestra región.
                                 </h2>
                             </div>
                             <a href="#">
@@ -48,25 +48,33 @@ interface ChooseData {
 const chooseData: ChooseData[] = [
     {
         id: 1,
-        title: "Vision",
+        title: "Visión",
         description:
-            "Inspiring and transforming lives in <br> a spiritually vital, caring school <br> community to serve God for <br> His glory.",
+            "“Somos un Instituto de Educación Superior Tecnológico Público que forma profesionales técnicos competitivos, emprendedores y éticos, mediante una educación de calidad por competencias, para incorporarlos a las actividades del desarrollo productivo de la Región”.",
         imgSrc: "/images/our-mission/mission/mission-thumb-1.jpg",
     },
     {
         id: 2,
-        title: "Mission",
+        title: "Misión",
         description:
-            "Acadia University transforms lives through <br> accessible, student-centered, quality <br> higher education.",
+            "“Al 2028, ser un Instituto de Educación Superior, líder a nivel macro regional en formación de profesionales técnicos con formación integral, emprendedores, con identidad social, comprometidos con el medio ambiente y el desarrollo de la Región”",
         imgSrc: "/images/our-mission/mission/mission-thumb-2.jpg",
         class: "main pt-100 mb-30 pl-125",
     },
     {
-        id: 3,
-        title: "Values",
-        description:
-            "Our goal is to develop and meet the <br> needs of each child so that he & she <br> becomes a well-rounded tomorrow <br> individual.",
-        imgSrc: "/images/our-mission/mission/mission-thumb-3.jpg",
-    },
+  id: 3,
+  title: "Valores",
+  description: `
+    <ul class="values-list">
+      <li>Ética y responsabilidad</li>
+      <li>Compromiso institucional</li>
+      <li>Respeto y trabajo en equipo</li>
+      <li>Excelencia académica</li>
+      <li>Innovación y mejora continua</li>
+    </ul>
+  `,
+  imgSrc: "/images/our-mission/mission/mission-thumb-3.jpg",
+},
+
 ];
 </script>

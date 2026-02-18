@@ -23,9 +23,9 @@
                         <div class="tp-about-exprience">
                             <div class="tp-about-exprience-text d-flex">
                                 <h3 class="tp-about-exprience-count">
-                                    <span data-purecounter-duration="1" data-purecounter-end="27" class="purecounter">27</span>
+                                    <span data-purecounter-duration="1" data-purecounter-end="27" class="purecounter">44</span>
                                 </h3>
-                                <p>Years of <br> Experience</p>
+                                <p>Años de <br> trayectoria</p>
                             </div>
                         </div>
                     </div>
@@ -33,13 +33,14 @@
                 <div class="col-lg-6">
                     <div class="tp-about-wrapper mb-60 wow fadeInRight" data-wow-delay=".3s">
                         <div class="tp-section mb-40">
-                            <h5 class="tp-section-subtitle">About Our University</h5>
-                            <h3 class="tp-section-title mb-30">A few words <br> about the
-                                <span> University <svg-shape-line/> </span>
+                            <h5 class="tp-section-subtitle">Sobre Nuestro Instituto</h5>
+                            <h3 class="tp-section-title mb-30">Educación <br> con  
+                                <span> propósito <svg-shape-line/> </span>
                             </h3>
-                            <p>Our community is being called to reimagine the future. As the <br> only university where
-                                a renowned design school comes together <br> with premier colleges, we are making
-                                learning more relevant <br> and transformational.</p>
+                            <p>El Instituto de Educación Superior Tecnológico Público Ayaviri es una institución 
+                            dedicada a la formación integral de profesionales técnicos competitivos, con sólidos valores éticos y 
+                            compromiso social. A través de una educación de calidad, innovación permanente y programas alineados a 
+                            las demandas del mercado laboral, contribuimos al desarrollo sostenible de nuestra región y del país.</p>
                         </div>
                         <div class="tp-about-list">
 
@@ -54,7 +55,7 @@
                             </div>
 
                             <div class="tp-about-btn pt-10">
-                                <nuxt-link class="tp-btn tp-btn-sm" href="/university-apply">Book an Appointment
+                                <nuxt-link class="tp-btn tp-btn-sm" href="/university-apply">Matriculas
                                     <span>
                                         <svg-arrow-right-one/>
                                     </span>
@@ -73,14 +74,14 @@ const about_lists = [
     {
         id: 1,
         icon: '/images/icon/about/about-icon-1.svg',
-        title: 'Building Trust',
-        subtitle: 'We are committed to <br/> building trust'
+        title: 'Formación con Valores',
+        subtitle: 'Educación basada en responsabilidad, <br/> ética y compromiso social.'
     },
     {
         id: 2,
         icon: '/images/icon/about/about-icon-2.svg',
-        title: 'Trusted by Students',
-        subtitle: 'Most trusted & recommended <br/> by students'
+        title: 'Confianza y Prestigio',
+        subtitle: 'Institución reconocida por la calidad académica <br/> y la confianza de nuestra comunidad.'
     }
 ];
 </script>

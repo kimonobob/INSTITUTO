@@ -3,8 +3,8 @@ import { type ITeamDT } from "@/types/team-d-t";
 export const online_instructors_data: ITeamDT[] = [
   {
     id: 1,
-    name: "Leslie Alexander",
-    title: "Teaches Interior Design",
+    name: "CPC. Juan Pari Huacasi",
+    title: "Docente",
     image: "/images/team/team-2-thumb-1.png",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
@@ -14,7 +14,7 @@ export const online_instructors_data: ITeamDT[] = [
   },
   {
     id: 2,
-    name: "Annette Black",
+    name: "CPC. Luisa Moscoso Diaz",
     title: "Teaches Interior Design",
     image: "/images/team/team-2-thumb-2.png",
     socials: [
@@ -26,7 +26,7 @@ export const online_instructors_data: ITeamDT[] = [
   },
   {
     id: 3,
-    name: "Kathryn Murphy",
+    name: "Ing. Leandro Cuno Hancco",
     title: "Teaches Interior Design",
     image: "/images/team/team-2-thumb-3.png",
     socials: [
@@ -38,7 +38,7 @@ export const online_instructors_data: ITeamDT[] = [
   },
   {
     id: 4,
-    name: "Mina Hollace",
+    name: "CPC. Julieta Rafael Pari",
     title: "Teaches Interior Design",
     image: "/images/team/team-2-thumb-4.png",
     socials: [
@@ -50,9 +50,9 @@ export const online_instructors_data: ITeamDT[] = [
   },
   {
     id: 5,
-    name: "Annette Black",
+    name: "CPC. Jesus Aquino Cutipa",
     title: "Teaches Interior Design",
-    image: "/images/team/team-2-thumb-2.png",
+    image: "/images/team/team-2-thumb-5.png",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -105,9 +105,9 @@ export const gym_trainer_data: ITeamDT[] = [
 export const leadership_data: ITeamDT[] = [
   {
     id: 8,
-    image: "/images/leadership/leadership-thumb-1.jpg",
-    title: "Principal",
-    name: "Courtney Henry",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Arquitectura de Plataformas TI",
+    name: "Ing. Elber CALCINA CONDORI",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -115,9 +115,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 9,
-    image: "/images/leadership/leadership-thumb-2.jpg",
-    title: "Athletic Assistant",
-    name: "Kristin Watson",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Arquitectura de Plataformas TI",
+    name: "Ing. Clemente VILCAPAZA LARICO",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -125,9 +125,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 10,
-    image: "/images/leadership/leadership-thumb-3.jpg",
-    title: "Principal",
-    name: "Chea-Lene Chang",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Arquitectura de Plataformas TI",
+    name: "Tec. Juan Michell QUISPE HUAMAN",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -135,9 +135,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 11,
-    image: "/images/leadership/leadership-thumb-4.jpg",
-    title: "Owner & Founder",
-    name: "James Warren",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Arquitectura de Plataformas TI",
+    name: "Ing. Alcides FLORES MARIÑO",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -145,9 +145,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 12,
-    image: "/images/leadership/leadership-thumb-5.jpg",
-    title: "Counselor",
-    name: "Johanna Chen",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Arquitectura de Plataformas TI",
+    name: "Ing. Jonatan Valdo VILCA QUISOCALA",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -155,9 +155,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 13,
-    image: "/images/leadership/leadership-thumb-6.jpg",
-    title: "Teacher, History",
-    name: "Leticia Aleman",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Arquitectura de Plataformas TI",
+    name: "Ing. Mario Vladimir CUTIPA ORTEGA",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -165,9 +165,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 14,
-    image: "/images/leadership/leadership-thumb-7.jpg",
-    title: "Assistant Teacher",
-    name: "Fernando Davila",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Producción Agropecuaria",
+    name: "Ing. Jorge TORRES VARGAS",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -175,9 +175,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 15,
-    image: "/images/leadership/leadership-thumb-8.jpg",
-    title: "Athletic Assistant",
-    name: "Brennan Davis",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Producción Agropecuaria",
+    name: "Ing. José Roberto QUISPE PACCO",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -185,9 +185,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 16,
-    image: "/images/leadership/leadership-thumb-9.jpg",
-    title: "Teacher, 1st grade",
-    name: "Connie Dodge",
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Producción Agropecuaria",
+    name: "Ing. Sindy Xiomara CAYO MERMA",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -195,9 +195,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 17,
-    image: "/images/leadership/leadership-thumb-10.jpg",
-    title: "Head of School",
-    name: "Kristin Watson",
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Producción Agropecuaria",
+    name: "Mvz. Fredy GUERRA AGUILAR",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -205,9 +205,9 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 18,
-    image: "/images/leadership/leadership-thumb-11.jpg",
-    title: "Assistant Principal",
-    name: "Mike Tyson",
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Enfermeríia Técnica",
+    name: "Lic. Jannet QUISPE PEREZ",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -215,9 +215,119 @@ export const leadership_data: ITeamDT[] = [
   },
   {
     id: 19,
-    image: "/images/leadership/leadership-thumb-12.jpg",
-    title: "Counselor",
-    name: "Johanna Chen",
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Enfermeríia Técnica",
+    name: "Lic. Maritza Lizbeht MAMANI ZUÑIGA",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 20,
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Enfermeríia Técnica",
+    name: "Lic. Jeaneth TERRAZAS DIAZ",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 21,
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Enfermeríia Técnica",
+    name: "Lic. Ruth AQUISE AQUISE",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 22,
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Industrias Alimentarias",
+    name: "Ing. Luz Mercedes RAMOS ZUÑIGA",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 23,
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Industrias Alimentarias",
+    name: "Bch. Crisel CRUZ PERKGA",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 24,
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Industrias Alimentarias",
+    name: "Ing. Edin Nestor CANA VILLANUEVA",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 25,
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Industrias Alimentarias",
+    name: "Ing.  Francisco Jaime SALVA QUISPE",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 26,
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Contabilidad",
+    name: "CPC. Juan Pastor PARI HUACASI",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 27,
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Contabilidad",
+    name: "CPC. Luisa Amparo MOSCOSO DIAZ",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 28,
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Contabilidad",
+    name: "Ing. Leandro CUNO HANCCO",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 29,
+    image: "/images/leadership/profile_woman.png",
+    title: "Docente Contabilidad",
+    name: "CPC. Julieta Brisaida RAFAEL PARI",
+    socials: [
+      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
+      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
+    ],
+  },
+  {
+    id: 30,
+    image: "/images/leadership/profile_man.jpg",
+    title: "Docente Contabilidad",
+    name: "CPC. Jesus Manuel AQUINO",
     socials: [
       { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
       { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
@@ -227,47 +337,99 @@ export const leadership_data: ITeamDT[] = [
 
 
 export const team_university: ITeamDT[] = [
+
+  // 🔹 Nivel Directivo
   {
-    id: 20,
-    name: "Patrick James",
-    title: "Head Coach",
-    image: "/images/team/about-team/about-team-1.jpg",
-    socials: [
-      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
-      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
-    ],
+    id: 1,
+    name: "Lic. Miguel Mendoza Loza",
+    title: "Jefe de Unidad Académica",
+    image: "/images/team/about-team/mml.png",
+    socials: [],
   },
   {
-    id: 21,
-    name: "Michael Patel",
-    title: "Head Coach",
-    image: "/images/team/about-team/about-team-2.jpg",
-    socials: [
-      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
-      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
-    ],
+    id: 2,
+    name: "Ing. Gerardo Chambilla Chaparro",
+    title: "Secretario Académico",
+    image: "/images/team/about-team/gcc.png",
+    socials: [],
   },
   {
-    id: 22,
-    name: "Samantha Lee",
-    title: "Head Coach",
-    image: "/images/team/about-team/about-team-3.jpg",
-    socials: [
-      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
-      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
-    ],
+    id: 3,
+    name: "Lic. Flavio Cornejo Gallegos",
+    title: "Administrador",
+    image: "/images/team/about-team/fcg.png",
+    socials: [],
+  },
+
+  // 🔹 Jefaturas
+  {
+    id: 4,
+    name: "Ing. Sigmarina Huanca Ñaupa",
+    title: "Jefe de Unidad de Bienestar y Empleabilidad",
+    image: "/images/team/about-team/shñ.png",
+    socials: [],
   },
   {
-    id: 23,
-    name: "David Johnson",
-    title: "Head Coach",
-    image: "/images/team/about-team/about-team-4.jpg",
-    socials: [
-      { id: 1, iconCls: 'fa-brands fa-facebook-f', link: "https://www.facebook.com/" },
-      { id: 2, iconCls: 'fa-brands fa-twitter', link: "https://twitter.com/" },
-    ],
+    id: 5,
+    name: "Ing. Brisdenia Condori Portillo",
+    title: "Jefe de Unidad de Investigación",
+    image: "/images/team/about-team/bcp.png",
+    socials: [],
   },
+  {
+    id: 6,
+    name: "Ing. Ydelfonso Tito Cajia",
+    title: "Jefe de Unidad de Formación Continua",
+    image: "/images/team/about-team/ytc.png",
+    socials: [],
+  },
+
+  // 🔹 Coordinadores Académicos
+  {
+    id: 7,
+    name: "Ing. Emilo Mamani Machaca",
+    title: "Coordinador P.E. de Contabilidad",
+    image: "/images/team/about-team/emm.png",
+    socials: [],
+  },
+  {
+    id: 8,
+    name: "Ing. Elber Calcina Condori",
+    title: "Coordinador P.E. de Arquitectura de Plataformas y Servicios de Tecnologías de Información",
+    image: "/images/team/about-team/ecc.png",
+    socials: [],
+  },
+  {
+    id: 9,
+    name: "Lic. Norma Huisa Ttito",
+    title: "Coordinadora de Enfermería Técnica",
+    image: "/images/team/about-team/nht.png",
+    socials: [],
+  },
+  {
+    id: 10,
+    name: "Ing. Alejandrina Flores Arizaca",
+    title: "Coordinadora P.E. de Industrias Alimentarias",
+    image: "/images/team/about-team/afa.png",
+    socials: [],
+  },
+  {
+    id: 11,
+    name: "Ing. Eddy Ramos Quispe",
+    title: "Coordinador P.E. de Producción Agropecuaria",
+    image: "/images/team/about-team/erq.png",
+    socials: [],
+  },
+  {
+    id: 12,
+    name: "Mvz. Edwin Elguera Larico",
+    title: "Coordinador del Área de Calidad",
+    image: "/images/team/about-team/eel.png",
+    socials: [],
+  },
+
 ];
+
 
 
 export const event_speakers_data: ITeamDT[] = [

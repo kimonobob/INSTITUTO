@@ -6,13 +6,13 @@
                     <div class="tp-program-wrap wow fadeInUp" data-wow-delay=".3s">
                         <div class="tp-section text-center mb-55">
                             <h3 class="tp-section-title">
-                                <span> Academic
+                                <span> Nuestros
                                     <img class="tp-underline-shape-2 wow bounceIn" data-wow-duration="1.5s"
                                         data-wow-delay=".4s" src="/images/unlerline/program-1-svg-1.svg"
                                         alt="underline">
-                                </span> Programs
+                                </span> Programas
                             </h3>
-                            <p>Focusing on high education with the best quality.</p>
+                            <p>Formamos profesionales técnicos con excelencia académica y responsabilidad social.</p>
                         </div>
                     </div>
                 </div>
@@ -39,13 +39,13 @@
                                 <div class="tp-program-tag">
                                     <p>
                                         <span>
-                                            <img src="/images/icon/program-tag-1.svg" alt="program-icon">
+                                            <img src="/images/icon/program.svg" alt="program-icon">
                                         </span>{{ item.category }}
                                     </p>
                                 </div>
                             </div>
                             <div class="tp-program-btn">
-                                <nuxt-link href="/university-application-form">Apply Now</nuxt-link>
+                                <nuxt-link href="university-program">Conoce Mas</nuxt-link>
                             </div>
                         </swiper-slide>
                     </swiper>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-12">
                     <div class="tp-program-all text-center">
-                        <p>Explore the most appropriate promgram.​​ <nuxt-link href="/university-program">View all Programs
+                        <p>Encuentra la carrera ideal para ti.​ <nuxt-link href="/university-program">Ver todos los programas
                                 <span>
                                     <svg-arrow-right-sm-three />
                                 </span>

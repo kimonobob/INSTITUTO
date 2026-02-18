@@ -5,8 +5,8 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="tp-plan-4-section">
-                        <span>Visit Barry!</span>
-                        <h3 class="tp-plan-4-section-title">Plan Your Meeting With Us</h3>
+                        <span>Instituto de Educación Superior Tecnológico Púbico</span>
+                        <h3 class="tp-plan-4-section-title">Conoce Nuestros Programas</h3>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -42,23 +42,36 @@ const activeId = ref(1);
 const planData = [
     {
         id: 1,
-        title: "Athletics",
-        description: "Athletics",
-        image: "/images/bg/plan/plan-4-bg-1.jpg",
+        title: "Enfermería Técnica",
+        description: "Área Salud",
+        image: "/images/bg/plan/enf.png",
         link: "/university-campus",
     },
     {
         id: 2,
-        title: "Faculty and <br/> staff",
-        description: "Meet our team",
-        image: "/images/bg/plan/plan-4-bg-2.jpg",
+        title: "Arquitectura de <br/> Plataformas y Servicios <br/> de Tecnologías de Información",
+        description: "Área de Tecnología e Informática",
+        image: "/images/bg/plan/atic.png",
         link: "/university-leadership",
     },
     {
         id: 3,
-        title: "Contact Us",
-        description: "Get in touch",
-        image: "/images/bg/plan/plan-4-bg-3.jpg",
+        title: "Contabilidad",
+        description: "Área Empresarial",
+        image: "/images/bg/plan/cnt.png",
+        link: "/contact",
+    },
+    {
+        id: 4,
+        title: "Producción <br/> Agropecuaria",
+        description: "Área Agropecuaria",
+        image: "/images/bg/plan/ag.png",
+        link: "/contact",
+    },{
+        id: 5,
+        title: "Industrias <br/> Alimentarias",
+        description: "Área de Industrias Alimentarias",
+        image: "/images/bg/plan/ind.png",
         link: "/contact",
     },
 ];
