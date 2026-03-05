@@ -3,7 +3,6 @@
     <div class="container">
       
       <div class="text-center mb-5">
-        <h6 class="text-danger fw-bold text-uppercase tracking-wider mb-2">IESTP AYAVIRI</h6>
         <h2 class="section-title d-flex justify-content-center align-items-center gap-3">
           Convocatorias Vigentes
           <span class="badge bg-red-primary text-white rounded-pill fs-6 px-3 py-1 shadow-sm">Nuevo</span>
@@ -23,12 +22,12 @@
               </span>
             </div>
 
-            <h3 class="fw-bolder mb-4 text-dark-blue" style="font-size: 2rem;">EXAMEN DE ADMISIÓN 2026 - I</h3>
+            <h3 class="fw-bolder mb-4 text-dark-blue" style="font-size: 2rem;">EXAMEN GENERAL 2026 - I</h3>
 
             <ul class="list-unstyled mb-4 dates-list">
               <li><strong>Preinscripciones:</strong> 23 feb. 2026 - 10 mar. 2026</li>
               <li><strong>Inscripciones:</strong> 02 mar. 2026 - 10 mar. 2026</li>
-              <li><strong>Examen General:</strong> 14 mar. 2026</li>
+              <li><strong>Examen:</strong> 14 mar. 2026 - 15 mar. 2026</li>
             </ul>
 
             <h6 class="fw-bold text-muted mb-3">Acciones Rápidas</h6>
@@ -73,7 +72,7 @@
           </div>
 
           <div class="col-lg-5 flyer-container d-none d-lg-block position-relative">
-            <img src="/images/hero/home-6/hero-6-thumb.png" alt="Afiche Admisión 2026 IESTP Ayaviri" class="img-fluid h-100 w-100 object-fit-cover">
+            <img src="/images/flyer-admision.jpg" alt="Afiche Admisión 2026" class="img-fluid h-100 w-100 object-fit-cover">
             <div class="flyer-overlay"></div>
           </div>
         </div>
@@ -83,22 +82,22 @@
         <div class="col-md-6">
           <div class="card secondary-card border-0 p-4 h-100">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="fw-bold text-muted m-0">Modalidad Extraordinaria</h5>
+              <h5 class="fw-bold text-muted m-0">Extraordinario</h5>
               <span class="badge bg-light text-secondary border px-3 py-2 rounded-pill">Finalizado</span>
             </div>
-            <p class="text-secondary fw-medium mb-1"><i class="bi bi-calendar3"></i> 20 de febrero</p>
-            <p class="text-muted small m-0">Para deportistas calificados, personas con discapacidad y otros perfiles específicos según prospecto.</p>
+            <p class="text-secondary fw-medium mb-1"><i class="bi bi-calendar3"></i> 30 de enero</p>
+            <p class="text-muted small m-0">Modalidad extraordinaria para perfiles específicos</p>
           </div>
         </div>
 
         <div class="col-md-6">
           <div class="card secondary-card border-0 p-4 h-100">
             <div class="d-flex justify-content-between align-items-start mb-3">
-              <h5 class="fw-bold text-muted m-0">Modalidad Exonerados</h5>
+              <h5 class="fw-bold text-muted m-0">CEPREUNA</h5>
               <span class="badge bg-light text-secondary border px-3 py-2 rounded-pill">Finalizado</span>
             </div>
-            <p class="text-secondary fw-medium mb-1"><i class="bi bi-calendar3"></i> 25 de febrero</p>
-            <p class="text-muted small m-0">Exclusivo para los primeros puestos de Educación Básica Regular (Colegios).</p>
+            <p class="text-secondary fw-medium mb-1"><i class="bi bi-calendar3"></i> 10 y 11 de enero</p>
+            <p class="text-muted small m-0">Postulantes del CEPREUNA</p>
           </div>
         </div>
       </div>
@@ -112,7 +111,7 @@
 .bg-light-gray {
   background-color: #f8fafc;
   background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-size: 20px 20px; /* Le da el efecto de cuadrícula sutil como en tu imagen */
 }
 
 /* Títulos */
@@ -121,9 +120,6 @@
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: -0.5px;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 .text-dark-blue {
   color: #0f172a;
@@ -169,7 +165,7 @@
   display: inline-block;
 }
 
-/* Botones de Acciones Rápidas */
+/* Botones de Acciones Rápidas (El "mejorado") */
 .quick-action-btn {
   display: flex;
   align-items: center;
@@ -236,12 +232,12 @@
   background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 15%);
 }
 
-/* Tarjetas Secundarias */
+/* Tarjetas Secundarias (Finalizadas) */
 .secondary-card {
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  opacity: 0.85; 
+  opacity: 0.85; /* Las hace ver un poco menos relevantes */
   transition: opacity 0.3s ease;
 }
 .secondary-card:hover {
