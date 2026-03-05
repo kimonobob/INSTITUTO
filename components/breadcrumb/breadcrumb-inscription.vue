@@ -1,8 +1,8 @@
 <template>
   <section class="tp-breadcrumb__area pt-160 pb-150 p-relative z-index-1 fix">
     <div
-      class="tp-breadcrumb__bg overlay"
-      :style="{ backgroundImage: 'url(/images/breadcrumb/contaportada.jpeg)' }"
+      class="tp-breadcrumb__bg"
+      :style="{ backgroundImage: 'url(/images/admision/portada.jpg)' }"
     ></div>
 
     <div class="container">

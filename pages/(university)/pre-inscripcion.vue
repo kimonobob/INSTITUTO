@@ -68,10 +68,13 @@
                       <label class="form-label text-muted small fw-semibold">Correo electrónico <span class="text-danger">*</span></label>
                       <input type="email" class="form-control modern-input" v-model="formData.correo" placeholder="ejemplo@correo.com">
                     </div>
+                    
                     <div class="col-md-6">
                       <div class="d-flex justify-content-between">
                         <label class="form-label text-muted small fw-semibold">Ubigeo de nacimiento <span class="text-danger">*</span></label>
-                        <a href="#" class="text-red-primary small text-decoration-none">ver ejemplo</a>
+                        <a href="#" @click.prevent="openUbigeoModal" class="text-red-primary small text-decoration-none">
+                          <i class="bi bi-info-circle me-1"></i>ver ejemplo
+                        </a>
                       </div>
                       <input type="text" class="form-control modern-input" v-model="formData.ubigeoNacimiento" @input="forceNumbers('ubigeoNacimiento', 6)" placeholder="Ej: 210801">
                     </div>
@@ -131,7 +134,7 @@
                 </div>
 
                 <div v-else-if="currentStep === 3" key="step3" class="form-step">
-                  <h5 class="fw-bold mb-4 text-dark-blue">Datos del colegio</h5>
+                  <h5 class="fw-bold mb-4 text-dark-blue">DATOS DE EDUCACIÓN SECUNDARIA</h5>
                   
                   <div class="row g-4">
                     <div class="col-12">
@@ -240,7 +243,9 @@
                     <div class="col-md-6">
                       <div class="d-flex justify-content-between">
                         <label class="form-label text-muted small fw-semibold">Código certificado</label>
-                        <a href="#" class="text-red-primary small text-decoration-none">ver ejemplo</a>
+                        <a href="#" @click.prevent="openCertificadoModal" class="text-red-primary small text-decoration-none">
+                          <i class="bi bi-info-circle me-1"></i>ver ejemplo
+                        </a>
                       </div>
                       <input type="text" class="form-control modern-input" v-model="formData.codigoCertificado" @input="forceUppercase('codigoCertificado')" placeholder="Ej: CE-123456789">
                     </div>
@@ -300,6 +305,93 @@
       </div>
     </div>
   </div>
+<transition name="fade-modal">
+      <div v-if="showUbigeoModal" class="custom-modal-overlay" @click="closeUbigeoModal">
+        <div class="custom-modal-content bg-white p-4 rounded-4 shadow-lg" style="max-width: 600px;" @click.stop>
+          
+          <button class="close-modal-btn" @click="closeUbigeoModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+
+          <div class="text-center mb-4">
+            <h5 class="fw-bold text-dark-blue mb-3">¿Dónde ubico mi código de Ubigeo?</h5>
+            <p class="text-muted small mb-3">Selecciona el tipo de DNI que tienes para ver el ejemplo:</p>
+            
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <button 
+                class="btn btn-sm rounded-pill fw-bold px-3" 
+                :class="activeDniTab === 'azul' ? 'btn-red-primary' : 'btn-outline-secondary'" 
+                @click="activeDniTab = 'azul'">
+                DNI Azul
+              </button>
+              <button 
+                class="btn btn-sm rounded-pill fw-bold px-3" 
+                :class="activeDniTab === 'electronico' ? 'btn-red-primary' : 'btn-outline-secondary'" 
+                @click="activeDniTab = 'electronico'">
+                DNI Electrónico
+              </button>
+              <button 
+                class="btn btn-sm rounded-pill fw-bold px-3" 
+                :class="activeDniTab === 'amarillo' ? 'btn-red-primary' : 'btn-outline-secondary'" 
+                @click="activeDniTab = 'amarillo'">
+                DNI Amarillo
+              </button>
+            </div>
+          </div>
+
+          <div class="text-center bg-light rounded-3 p-3">
+            <transition name="fade" mode="out-in">
+              <img :key="activeDniTab" :src="dniImages[activeDniTab]" alt="Ubicación de Ubigeo en DNI" class="img-fluid rounded shadow-sm" style="max-height: 350px;">
+            </transition>
+          </div>
+
+        </div>
+      </div>
+    </transition>
+<transition name="fade-modal">
+      <div v-if="showCertificadoModal" class="custom-modal-overlay" @click="closeCertificadoModal">
+        <div class="custom-modal-content bg-white p-4 rounded-4 shadow-lg" style="max-width: 600px;" @click.stop>
+          
+          <button class="close-modal-btn" @click="closeCertificadoModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+
+          <div class="text-center mb-4">
+            <h5 class="fw-bold text-dark-blue mb-3">¿Dónde ubico el código de mi certificado?</h5>
+            <p class="text-muted small mb-3">Selecciona el tipo de documento que tienes para ver el ejemplo:</p>
+            
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <button 
+                class="btn btn-sm rounded-pill fw-bold px-3" 
+                :class="activeCertificadoTab === 'amarillo' ? 'btn-red-primary' : 'btn-outline-secondary'" 
+                @click="activeCertificadoTab = 'amarillo'">
+                Amarillo
+              </button>
+              <button 
+                class="btn btn-sm rounded-pill fw-bold px-3" 
+                :class="activeCertificadoTab === 'blanco' ? 'btn-red-primary' : 'btn-outline-secondary'" 
+                @click="activeCertificadoTab = 'blanco'">
+                Blanco
+              </button>
+              <button 
+                class="btn btn-sm rounded-pill fw-bold px-3" 
+                :class="activeCertificadoTab === 'constancia' ? 'btn-red-primary' : 'btn-outline-secondary'" 
+                @click="activeCertificadoTab = 'constancia'">
+                Constancia (CLA)
+              </button>
+            </div>
+          </div>
+
+          <div class="text-center bg-light rounded-3 p-3">
+            <transition name="fade" mode="out-in">
+              <img :key="activeCertificadoTab" :src="certificadoImages[activeCertificadoTab]" alt="Ubicación de código en el certificado" class="img-fluid rounded shadow-sm" style="max-height: 350px;">
+            </transition>
+          </div>
+
+        </div>
+      </div>
+    </transition>
+
 </template>
 
 <script setup lang="ts">
@@ -349,10 +441,50 @@ const colegiosData: Record<string, string[]> = {
   "AYAVIRI": ["MARIANO MELGAR", "NUESTRA SEÑORA DE ALTAGRACIA", "SAN FRANCISCO DE ASÍS"]
 }
 
-const modalidades = ['EXAMEN GENERAL', 'EXONERADO (PRIMEROS PUESTOS)', 'EXONERADO (DEPORTISTAS)', 'CEPRE']
-const programasEstudio = ['ENFERMERÍA TÉCNICA', 'COMPUTACIÓN E INFORMÁTICA', 'CONTABILIDAD', 'PRODUCCIÓN AGROPECUARIA', 'MECÁNICA AUTOMOTRIZ', 'SECRETARIADO EJECUTIVO']
-const tiposCertificado = ['Certificado de Estudios (CE)', 'Constancia de Logros de Aprendizaje (CLA)']
+const modalidades = ['ORDINARIO', 'EXONERADO (PRIMEROS PUESTOS)', 'EXTRAORDINARIO']
+const programasEstudio = ['Contabilidad', 'Enfermería Técnica', 'Producción Agropecuaria', 'Industrias Alimentarias', 'Arquitectura de Plataformas y Servicios de Tecnologías de Información']
+const tiposCertificado = ['Certificado de Estudios (Amarillo)', 'Certificado de Estudios (Blanco)', 'Constancia de Logros de Aprendizaje (CLA)']
 
+// --- LÓGICA DE LA VENTANA FLOTANTE (UBIGEO) ---
+const showUbigeoModal = ref(false)
+const activeDniTab = ref('azul') // Por defecto arranca mostrando el azul
+
+// Diccionario con las rutas de tus imágenes
+const dniImages: Record<string, string> = {
+  azul: '/images/admision/dnia.jpg',
+  electronico: '/images/admision/dnie.jpg',
+  amarillo: '/images/admision/dniam.jpg'
+}
+
+const openUbigeoModal = () => {
+  activeDniTab.value = 'azul' // Resetea a azul cada vez que se abre
+  showUbigeoModal.value = true
+}
+
+const closeUbigeoModal = () => {
+  showUbigeoModal.value = false
+}
+
+
+// --- LÓGICA DE LA VENTANA FLOTANTE (CERTIFICADOS) ---
+const showCertificadoModal = ref(false)
+const activeCertificadoTab = ref('amarillo') // Inicia mostrando el certificado amarillo
+
+// Diccionario con las rutas de las imágenes de los certificados
+const certificadoImages: Record<string, string> = {
+  amarillo: '/images/admision/certia.jpg',
+  blanco: '/images/admision/certib.jpg',
+  constancia: '/images/admision/constanciae.jpg'
+}
+
+const openCertificadoModal = () => {
+  activeCertificadoTab.value = 'amarillo' // Resetea a amarillo al abrir
+  showCertificadoModal.value = true
+}
+
+const closeCertificadoModal = () => {
+  showCertificadoModal.value = false
+}
 // --- LÓGICA DE CASCADA ---
 const departamentosDisponibles = computed(() => Object.keys(ubigeoData))
 const provinciasDisponibles = computed(() => {
@@ -563,4 +695,63 @@ const prevStep = () => {
 }
 .fade-enter-from { opacity: 0; transform: translateX(20px); }
 .fade-leave-to { opacity: 0; transform: translateX(-20px); }
+
+/* =========================================
+   ESTILOS DE LA VENTANA FLOTANTE (MODAL UBIGEO)
+   ========================================= */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.85); /* Fondo oscuro transparente */
+  backdrop-filter: blur(4px); /* Efecto de desenfoque */
+  z-index: 9999; /* Esto hace que flote por encima de TODO */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-modal-content {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto; /* Por si la pantalla del celular es muy pequeña */
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #e11d48; /* Rojo IESTP Ayaviri */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.close-modal-btn:hover {
+  background: #be123c;
+  transform: scale(1.1);
+}
+
+/* Animación de entrada y salida suave */
+.fade-modal-enter-active,
+.fade-modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-modal-enter-from,
+.fade-modal-leave-to {
+  opacity: 0;
+}
 </style>

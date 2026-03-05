@@ -32,27 +32,28 @@
             </ul>
 
             <h6 class="fw-bold text-muted mb-3">Acciones Rápidas</h6>
+            
             <div class="row g-3 mb-5">
               <div class="col-sm-6">
-                <a href="#" class="quick-action-btn">
+                <a href="#" @click.prevent="openModal('/images/admision/requisitos.png')" class="quick-action-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                   Requisitos
                 </a>
               </div>
               <div class="col-sm-6">
-                <a href="#" class="quick-action-btn">
+                <a href="#" @click.prevent="openModal('/images/admision/pagos.png')" class="quick-action-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
                   Pagos
                 </a>
               </div>
               <div class="col-sm-6">
-                <a href="#" class="quick-action-btn">
+                <a href="#" @click.prevent="openModal('/images/admision/vacantes.png')" class="quick-action-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                   Vacantes
                 </a>
               </div>
               <div class="col-sm-6">
-                <a href="#" class="quick-action-btn">
+                <a href="#" @click.prevent="openModal('/images/admision/cronograma.png')" class="quick-action-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                   Cronograma
                 </a>
@@ -104,10 +105,42 @@
       </div>
 
     </div>
+
+    <transition name="fade-modal">
+      <div v-if="selectedModalImage" class="custom-modal-overlay" @click="closeModal">
+        <div class="custom-modal-content" @click.stop>
+          <button class="close-modal-btn" @click="closeModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+          <img :src="selectedModalImage" alt="Información de Admisión" class="img-fluid rounded-3 shadow-lg">
+        </div>
+      </div>
+    </transition>
+
   </section>
 </template>
 
+<script setup lang="ts">
+import { ref } from 'vue'
+
+// Variable reactiva que guarda la ruta de la imagen seleccionada
+const selectedModalImage = ref<string | null>(null)
+
+// Función para abrir la ventana flotante asignando la ruta de la imagen
+const openModal = (imagePath: string) => {
+  selectedModalImage.value = imagePath
+}
+
+// Función para cerrar la ventana flotante (limpia la variable)
+const closeModal = () => {
+  selectedModalImage.value = null
+}
+</script>
+
 <style scoped>
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
 /* Fondo general sutil */
 .bg-light-gray {
   background-color: #f8fafc;
@@ -182,6 +215,7 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 .quick-action-btn:hover {
   background-color: #fff1f2;
@@ -246,5 +280,73 @@
 }
 .secondary-card:hover {
   opacity: 1;
+}
+
+/* =========================================
+   ESTILOS DE LA VENTANA FLOTANTE (MODAL)
+   ========================================= */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.custom-modal-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-modal-content img {
+  max-height: 85vh;
+  object-fit: contain;
+  background-color: white; /* Por si la imagen tiene transparencias */
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: #e11d48;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.close-modal-btn:hover {
+  background: #be123c;
+  transform: scale(1.1);
+}
+
+/* Animación de entrada y salida */
+.fade-modal-enter-active,
+.fade-modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-modal-enter-from,
+.fade-modal-leave-to {
+  opacity: 0;
 }
 </style>

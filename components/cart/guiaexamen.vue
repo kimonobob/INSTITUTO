@@ -3,7 +3,7 @@
     <div class="container">
       <div class="text-center mb-5">
         <h6 class="text-danger fw-bold text-uppercase tracking-wider mb-2">IESTP AYAVIRI</h6>
-        <h2 class="exam-title">EXAMEN GENERAL 2026 - I</h2>
+        <h2 class="exam-title">EXAMEN DE ADMISIÓN ORDINARIO 2026</h2>
         <p class="text-muted fs-5">¿No sabes por dónde empezar? Aquí te guiamos paso a paso.</p>
       </div>
 
@@ -15,40 +15,40 @@
           <div class="step-item active">
             <div class="step-circle">1</div>
             <div class="step-text">
-              <span class="step-title">Preinscripción Virtual</span>
-              <span class="step-date"><span class="active-dot"></span> 23-feb. – 10-mar.</span>
+              <span class="step-title">Convocatoria y Preinscripción / Inscripción</span>
+              <span class="step-date"><span class="active-dot"></span> 02-mar. – 07-abr. / 09-mar. – 07-abr.</span>
             </div>
           </div>
 
           <div class="step-item inactive">
             <div class="step-circle">2</div>
             <div class="step-text">
-              <span class="step-title">Inscripción Presencial <br>(Sede Institucional)</span>
-              <span class="step-date"> 02-mar. – 10-mar.</span>
+              <span class="step-title">Inscripción Exonerados y Extraordinario</span>
+              <span class="step-date">09-mar. – 05-abr.</span>
             </div>
           </div>
 
           <div class="step-item inactive">
             <div class="step-circle">3</div>
             <div class="step-text">
-              <span class="step-title">Examen de Admisión</span>
-              <span class="step-date">14 mar. 2026</span>
+              <span class="step-title">Examen por Exoneración</span>
+              <span class="step-date">06 abr. 2026</span>
             </div>
           </div>
 
           <div class="step-item inactive">
             <div class="step-circle">4</div>
             <div class="step-text">
-              <span class="step-title">Resultados</span>
-              <span class="step-date">15 mar. 2026</span>
+              <span class="step-title">Examen Extraordinario</span>
+              <span class="step-date">07 abr. 2026</span>
             </div>
           </div>
 
           <div class="step-item inactive">
             <div class="step-circle">5</div>
             <div class="step-text">
-              <span class="step-title">Control Biométrico <br>(Ingresantes)</span>
-              <span class="step-date">16-mar. – 19-mar.</span>
+              <span class="step-title">Examen Ordinario y Publicación de Resultados</span>
+              <span class="step-date">08 abr. 2026</span>
             </div>
           </div>
         </div>
@@ -64,8 +64,8 @@
           <div class="col-lg-5">
             <h6 class="fw-bold mb-3 text-dark-red">1) ¿Qué etapa está activa hoy?</h6>
             <div class="d-flex flex-column gap-3 mb-3 align-items-start">
-              <span class="badge-custom">Preinscripción activa (virtual / en línea)</span>
-              <span class="badge-custom">Inscripción activa (presencial en el Instituto)</span>
+              <span class="badge-custom">Convocatoria activa</span>
+              <span class="badge-custom">Inscripción activa (presencial en Mesa de Partes)</span>
             </div>
             <p class="text-muted small mt-4">
               Si ves "<span class="active-dot-inline"></span>" en una fecha, significa que esa etapa está activa hoy.
@@ -76,19 +76,19 @@
             <div class="bg-light-red p-4 rounded-4 modern-box">
               <h6 class="fw-bold mb-3 text-dark-red">2) ¿Qué debo hacer ahora?</h6>
               <ul class="task-list mb-4">
-                <li>Entra a la Preinscripción Virtual y completa tus datos con calma (verifica nombres y DNI).</li>
-                <li>Descarga e imprime tu solicitud de preinscripción.</li>
-                <li>Revisa los requisitos exigidos para el proceso de admisión.</li>
-                <li>Acércate al local del <strong>IESTP Ayaviri</strong> para la Inscripción Presencial con tus documentos.</li>
+                <li>Realiza la inscripción en Mesa de Partes del IESTP Ayaviri con tus documentos.</li>
+                <li>Paga el derecho de admisión (Banco de la Nación o caja institucional).</li>
+                <li>Revisa los requisitos exigidos (DNI, certificado SIAGIE, foto, voucher de pago).</li>
+                <li>Prepárate para el examen ordinario el 08 de abril en el Coliseo cerrado.</li>
               </ul>
               
               <div class="d-flex gap-3 flex-wrap mt-4">
                 <nuxt-link to="/pre-inscripcion" class="btn btn-red-primary px-4 py-2 rounded-pill fw-bold">
-                  Iniciar Preinscripción
+                  Iniciar Inscripción
                 </nuxt-link>
-                <button class="btn btn-red-outline px-4 py-2 rounded-pill fw-bold">
-                  Ver Prospecto
-                </button>
+                <a href="/documentos/Prospectoadmisión2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-red-outline px-4 py-2 rounded-pill fw-bold">
+  Ver Prospecto
+</a>
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@
           </div>
           <div>
             <h6 class="fw-bold mb-1 text-dark-red">Importante</h6>
-            <p class="m-0 text-muted">La <strong>Inscripción</strong> se realiza de forma <strong>presencial</strong> en la <strong>Sede Institucional del IESTP Ayaviri</strong>. Lleva tu DNI y los requisitos solicitados.</p>
+            <p class="m-0 text-muted">La <strong>Inscripción</strong> se realiza de forma <strong>presencial</strong> en la <strong>Mesa de Partes del IESTP Ayaviri</strong>. Lleva tu DNI y los requisitos solicitados.</p>
           </div>
         </div>
 
