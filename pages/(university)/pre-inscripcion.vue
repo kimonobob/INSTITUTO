@@ -17,7 +17,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           
-          <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden" v-if="!isSuccess">
             <div class="card-body p-4 p-md-5">
 
               <transition name="fade" mode="out-in">
@@ -50,7 +50,10 @@
                         </select>
                       </div>
                     </div>
-
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small fw-semibold">DNI del Postulante <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control modern-input" v-model="formData.dni" @input="forceNumbers('dni', 8)" placeholder="Ej: 71234567">
+                    </div>
                     <div class="col-md-4">
                       <label class="form-label text-muted small fw-semibold">Primer apellido <span class="text-danger">*</span></label>
                       <input type="text" class="form-control modern-input" v-model="formData.primerApellido" @input="forceLetters('primerApellido')" placeholder="Ej: SALAMANCA">
@@ -134,54 +137,69 @@
                 </div>
 
                 <div v-else-if="currentStep === 3" key="step3" class="form-step">
-                  <h5 class="fw-bold mb-4 text-dark-blue">DATOS DE EDUCACIÓN SECUNDARIA</h5>
-                  
-                  <div class="row g-4">
-                    <div class="col-12">
-                      <label class="form-label text-muted small fw-semibold">Año de egreso:</label>
-                     <input type="number" class="form-control modern-input" v-model="formData.anioEgreso" @input="forceNumbers('anioEgreso', 4)" placeholder="Ej: 2019" min="1950" max="2026">
+                    <h5 class="fw-bold mb-4 text-dark-blue">DATOS DE EDUCACIÓN SECUNDARIA</h5>
+  
+                    <div class="row g-4">
+                      <div class="col-12">
+                     <label class="form-label text-muted small fw-semibold">Año de egreso <span class="text-danger">*</span></label>
+                      <input type="number" class="form-control modern-input" v-model="formData.anioEgreso" @input="forceNumbers('anioEgreso', 4)" placeholder="Ej: 2019" min="1950" max="2026">
                     </div>
 
                     <div class="col-12">
-                      <label class="form-label text-muted small fw-semibold">País:</label>
-                      <select class="form-select modern-input" v-model="formData.paisColegio" @change="onDepartamentoColegioChange">
+                    <label class="form-label text-muted small fw-semibold">País <span class="text-danger">*</span></label>
+                    <select class="form-select modern-input" v-model="formData.paisColegio" @change="onDepartamentoColegioChange">
                         <option value="PERÚ">PERÚ</option>
                         <option value="OTRO">OTRO</option>
-                      </select>
+                    </select>
                     </div>
 
                     <div class="col-md-4">
-                      <label class="form-label text-muted small fw-semibold">Departamento:</label>
-                      <select class="form-select modern-input" v-model="formData.departamentoColegio" @change="onDepartamentoColegioChange" :disabled="formData.paisColegio !== 'PERÚ'">
+                    <label class="form-label text-muted small fw-semibold">Departamento <span class="text-danger">*</span></label>
+                    <select class="form-select modern-input" v-model="formData.departamentoColegio" @change="onDepartamentoColegioChange" :disabled="formData.paisColegio !== 'PERÚ'">
                         <option value="">Seleccione...</option>
-                        <option v-for="dep in departamentosDisponibles" :key="dep" :value="dep">{{ dep }}</option>
-                      </select>
+                        <option v-for="dep in departamentosColegioDisponibles" :key="dep" :value="dep">{{ dep }}</option>
+                    </select>
                     </div>
-                    
+    
                     <div class="col-md-4">
-                      <label class="form-label text-muted small fw-semibold">Provincia:</label>
-                      <select class="form-select modern-input" v-model="formData.provinciaColegio" @change="onProvinciaColegioChange" :disabled="!formData.departamentoColegio">
+                    <label class="form-label text-muted small fw-semibold">Provincia <span class="text-danger">*</span></label>
+                    <select class="form-select modern-input" v-model="formData.provinciaColegio" @change="onProvinciaColegioChange" :disabled="!formData.departamentoColegio || formData.paisColegio !== 'PERÚ'">
                         <option value="">Seleccione...</option>
                         <option v-for="prov in provinciasColegioDisponibles" :key="prov" :value="prov">{{ prov }}</option>
-                      </select>
+                    </select>
                     </div>
 
                     <div class="col-md-4">
-                      <label class="form-label text-muted small fw-semibold">Distrito:</label>
-                      <select class="form-select modern-input" v-model="formData.distritoColegio" @change="onDistritoColegioChange" :disabled="!formData.provinciaColegio">
+                    <label class="form-label text-muted small fw-semibold">Distrito <span class="text-danger">*</span></label>
+                    <select class="form-select modern-input" v-model="formData.distritoColegio" @change="onDistritoColegioChange" :disabled="!formData.provinciaColegio || formData.paisColegio !== 'PERÚ'">
                         <option value="">Seleccione...</option>
                         <option v-for="dist in distritosColegioDisponibles" :key="dist" :value="dist">{{ dist }}</option>
-                      </select>
+                    </select>
                     </div>
 
-                    <div class="col-12">
-                      <label class="form-label text-muted small fw-semibold">Nombre de colegio:</label>
-                      <select class="form-select modern-input" v-model="formData.nombreColegio" :disabled="!formData.distritoColegio">
-                        <option value="">Seleccione un colegio...</option>
-                        <option v-for="colegio in colegiosDisponibles" :key="colegio" :value="colegio">{{ colegio }}</option>
-                      </select>
+                   <div class="col-12">
+                    <label class="form-label text-muted small fw-semibold">Nombre de colegio <span class="text-danger">*</span></label>
+                    
+                    <input 
+                        type="text" 
+                        class="form-control modern-input" 
+                        list="lista-colegios" 
+                        v-model="formData.nombreColegio" 
+                        @input="buscarCodigoModular"
+                        :disabled="!formData.distritoColegio || formData.paisColegio !== 'PERÚ'"
+                        placeholder="Escribe para buscar tu colegio..."
+                    >
+                    
+                    <datalist id="lista-colegios">
+                        <option v-for="colegio in colegiosDisponibles" :key="colegio.COD_MOD" :value="colegio.CEN_EDU"></option>
+                    </datalist>
+                    
+                    <div v-if="formData.codigoModular" class="mt-2 small text-success fw-bold">
+                        <i class="bi bi-check-circle-fill"></i> Código Modular detectado: {{ formData.codigoModular }}
                     </div>
-                  </div>
+                    </div>
+
+                </div>
                 </div>
 
                 <div v-else-if="currentStep === 4" key="step4" class="form-step">
@@ -251,12 +269,31 @@
                     </div>
 
                     <div class="col-12 border-top pt-4 mt-2">
-                      <div class="d-flex justify-content-between">
-                        <label class="form-label text-muted small fw-bold">Código de pago (Voucher) <span class="text-danger">*</span></label>
-                        <a href="#" class="text-red-primary small text-decoration-none">¿Dónde ubicarlo?</a>
-                      </div>
-                      <input type="text" class="form-control modern-input" v-model="formData.codigoPago" @input="forceUppercase('codigoPago')" placeholder="Ej: 00012345678" style="border-color: #cbd5e1; background-color: #f8fafc;">
-                    </div>
+  <div class="row g-4">
+    
+    <div class="col-md-6">
+      <label class="form-label text-muted small fw-bold">Lugar de Pago <span class="text-danger">*</span></label>
+      <select class="form-select modern-input" v-model="formData.metodoPago" @change="formData.metodoPago === 'No realicé el pago' ? formData.codigoPago = '' : null" style="border-color: #cbd5e1; background-color: #f8fafc;">
+        <option value="Caja del Instituto">Caja del Instituto</option>
+        <option value="Banco de la Nación">Banco de la Nación</option>
+        <option value="No realicé el pago">Aún no realicé el pago</option>
+      </select>
+    </div>
+
+    <div class="col-md-6" v-if="formData.metodoPago !== 'No realicé el pago'">
+      
+      <div class="d-flex justify-content-between align-items-end mb-2">
+        <label class="form-label text-muted small fw-bold mb-0">Código de Operación / Recibo <span class="text-danger">*</span></label>
+        
+        <a href="#" class="text-red-primary small text-decoration-none">¿Dónde ubicarlo?</a>
+      </div>
+      
+      <input type="text" class="form-control modern-input" v-model="formData.codigoPago" @input="forceUppercase('codigoPago')" placeholder="Ej: 0012345" style="border-color: #cbd5e1; background-color: #f8fafc;">
+    
+    </div>
+    
+  </div>
+</div>
 
                   </div>
                 </div>
@@ -299,13 +336,30 @@
     </div>
 
 </div>
+          </div> <div class="card shadow-lg border-0 rounded-4 overflow-hidden p-4 p-md-5 text-center success-animation" v-else>
+            <div class="mb-4 d-flex justify-content-center mt-4">
+              <div class="rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#198754" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.02Z"/>
+                </svg>
+              </div>
+            </div>
+            <h2 class="fw-bold text-dark mb-3">¡Felicidades, diste el primer gran paso!</h2>
+            <p class="text-muted mb-5 mx-auto fs-5" style="max-width: 600px;">
+              Tu preinscripción al <strong>IESTP Ayaviri</strong> ha sido registrada exitosamente. Prepárate para iniciar tu camino profesional. Te invitamos a estar atento a nuestros canales oficiales para los siguientes pasos.
+            </p>
+            <div class="mb-4">
+              <NuxtLink to="/" class="btn btn-red-primary px-5 py-3 rounded-pill fw-bold shadow-sm" style="font-size: 1.1rem;">
+                Volver a la página principal
+              </NuxtLink>
+            </div>
           </div>
-
-        </div>
+          </div>
       </div>
     </div>
   </div>
-<transition name="fade-modal">
+
+  <transition name="fade-modal">
       <div v-if="showUbigeoModal" class="custom-modal-overlay" @click="closeUbigeoModal">
         <div class="custom-modal-content bg-white p-4 rounded-4 shadow-lg" style="max-width: 600px;" @click.stop>
           
@@ -395,61 +449,47 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 
 const currentStep = ref(1) 
 const totalSteps = 5
 const errorMsg = ref('') 
 const isSubmitting = ref(false)
+const isSuccess = ref(false) // <--- NUEVA VARIABLE PARA LA PANTALLA DE ÉXITO
 
-// ¡AQUÍ ESTÁ TU ENLACE REAL INTEGRADO!
+// TU ENLACE REAL DE GOOGLE SHEETS
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwqtz6zU_TNBpQGWyKBtrL708wfs_N3pKVpTV26Y-REehkUHihfGmYceCdvrsRGXpdK3g/exec' 
 
 const formData = ref({
   // Paso 1
+  dni: '',
   sexo: 'M', estadoCivil: 'Soltero', primerApellido: '', segundoApellido: '', nombres: '',
   correo: '', ubigeoNacimiento: '', celular: '', fechaNacimiento: '',
   
-  // Paso 2
+  // Paso 2 (Residencia)
   pais: 'PERÚ', departamento: '', provincia: '', distrito: '', direccion: '',
 
-  // Paso 3
+  // Paso 3 (Colegio)
   anioEgreso: '', paisColegio: 'PERÚ', departamentoColegio: '', provinciaColegio: '',
-  distritoColegio: '', nombreColegio: '',
+  distritoColegio: '', nombreColegio: '', codigoModular: '',
 
   // Paso 4
   madreDocumento: '', madreNombres: '', madrePrimerApellido: '', madreSegundoApellido: '',
   padreDocumento: '', padreNombres: '', padrePrimerApellido: '', padreSegundoApellido: '',
   
   // Paso 5
-  modalidad: 'EXAMEN GENERAL', programaEstudio: '', tipoCertificado: '', codigoCertificado: '',codigoPago: '',
+  modalidad: 'EXAMEN GENERAL', programaEstudio: '', tipoCertificado: '', codigoCertificado: '', codigoPago: '',metodoPago: 'Caja del Instituto'
 })
 
-// --- DICCIONARIOS ---
-const ubigeoData: Record<string, Record<string, string[]>> = {
-  "PUNO": {
-    "PUNO": ["PUNO", "ACORA", "AMANTANI", "ATUNCOLLA", "CAPACHICA", "CHUCUITO", "COATA", "HUATA", "MAÑAZO", "PAUCARCOLLA", "PICHACANI", "PLATERIA", "SAN ANTONIO", "TIQUILLACA", "VILQUE"],
-    "SAN ROMAN": ["JULIACA", "CABANILLAS", "CALAPUJA", "CARACOTO", "SAN MIGUEL"],
-    "MELGAR": ["AYAVIRI", "ANTAUTA", "CUPI", "LLALLI", "MACARI", "NUÑOA", "ORURILLO", "SANTA ROSA", "UMACHIRI"],
-    "AZANGARO": ["AZANGARO", "ACHAYA", "ARAPA", "ASILLO", "CAMINACA", "CHUPA", "JOSÉ DOMINGO CHOQUEHUANCA", "MUÑANI", "POTONI", "SAMAN", "SAN ANTON", "SAN JOSE", "SAN JUAN DE SALINAS", "SANTIAGO DE PUPUJA", "TIRAPATA"]
-  }
-}
-
-const colegiosData: Record<string, string[]> = {
-  "JULIACA": ["32 MARIANO H. CORNEJO", "POLITECNICO REGIONAL LOS ANDES", "LAS MERCEDES", "SAN ROMAN"],
-  "PUNO": ["GLORIOSO SAN CARLOS", "SANTA ROSA", "CARLOS RUBINA BURGOS"],
-  "AYAVIRI": ["MARIANO MELGAR", "NUESTRA SEÑORA DE ALTAGRACIA", "SAN FRANCISCO DE ASÍS"]
-}
-
+// --- CONSTANTES ---
 const modalidades = ['ORDINARIO', 'EXONERADO (PRIMEROS PUESTOS)', 'EXTRAORDINARIO']
 const programasEstudio = ['Contabilidad', 'Enfermería Técnica', 'Producción Agropecuaria', 'Industrias Alimentarias', 'Arquitectura de Plataformas y Servicios de Tecnologías de Información']
 const tiposCertificado = ['Certificado de Estudios (Amarillo)', 'Certificado de Estudios (Blanco)', 'Constancia de Logros de Aprendizaje (CLA)']
 
 // --- LÓGICA DE LA VENTANA FLOTANTE (UBIGEO) ---
 const showUbigeoModal = ref(false)
-const activeDniTab = ref('azul') // Por defecto arranca mostrando el azul
+const activeDniTab = ref('azul') 
 
-// Diccionario con las rutas de tus imágenes
 const dniImages: Record<string, string> = {
   azul: '/images/admision/dnia.jpg',
   electronico: '/images/admision/dnie.jpg',
@@ -457,20 +497,15 @@ const dniImages: Record<string, string> = {
 }
 
 const openUbigeoModal = () => {
-  activeDniTab.value = 'azul' // Resetea a azul cada vez que se abre
+  activeDniTab.value = 'azul' 
   showUbigeoModal.value = true
 }
-
-const closeUbigeoModal = () => {
-  showUbigeoModal.value = false
-}
-
+const closeUbigeoModal = () => { showUbigeoModal.value = false }
 
 // --- LÓGICA DE LA VENTANA FLOTANTE (CERTIFICADOS) ---
 const showCertificadoModal = ref(false)
-const activeCertificadoTab = ref('amarillo') // Inicia mostrando el certificado amarillo
+const activeCertificadoTab = ref('amarillo') 
 
-// Diccionario con las rutas de las imágenes de los certificados
 const certificadoImages: Record<string, string> = {
   amarillo: '/images/admision/certia.jpg',
   blanco: '/images/admision/certib.jpg',
@@ -478,42 +513,119 @@ const certificadoImages: Record<string, string> = {
 }
 
 const openCertificadoModal = () => {
-  activeCertificadoTab.value = 'amarillo' // Resetea a amarillo al abrir
+  activeCertificadoTab.value = 'amarillo' 
   showCertificadoModal.value = true
 }
+const closeCertificadoModal = () => { showCertificadoModal.value = false }
 
-const closeCertificadoModal = () => {
-  showCertificadoModal.value = false
-}
-// --- LÓGICA DE CASCADA ---
-const departamentosDisponibles = computed(() => Object.keys(ubigeoData))
+// ==============================================================
+// BASE DE DATOS MAESTRA (PARA RESIDENCIA Y COLEGIOS)
+// ==============================================================
+const colegiosDatabase = ref<any[]>([])
+
+onMounted(async () => {
+  try {
+    const respuesta = await fetch('/Documentos/IEsecundaria.json')
+    colegiosDatabase.value = await respuesta.json()
+    console.log("¡Base de datos nacional cargada exitosamente!")
+  } catch (error) {
+    console.error("Error al cargar IEsecundaria.json:", error)
+  }
+})
+
+// Obtenemos todos los departamentos del Perú de forma única
+const departamentosNacionales = computed(() => {
+  if (colegiosDatabase.value.length === 0) return []
+  const departamentos = colegiosDatabase.value.map(item => item.D_DPTO)
+  return [...new Set(departamentos)].sort()
+})
+
+// ==============================================================
+// LÓGICA DE CASCADA PARA EL PASO 2 (RESIDENCIA)
+// ==============================================================
+const departamentosDisponibles = computed(() => departamentosNacionales.value)
+
 const provinciasDisponibles = computed(() => {
-  if (!formData.value.departamento || !ubigeoData[formData.value.departamento]) return []
-  return Object.keys(ubigeoData[formData.value.departamento])
+  if (!formData.value.departamento) return []
+  const provincias = colegiosDatabase.value
+    .filter(item => item.D_DPTO === formData.value.departamento)
+    .map(item => item.D_PROV)
+  return [...new Set(provincias)].sort()
 })
+
 const distritosDisponibles = computed(() => {
-  if (!formData.value.departamento || !formData.value.provincia) return []
-  return ubigeoData[formData.value.departamento][formData.value.provincia] || []
+  if (!formData.value.provincia) return []
+  const distritos = colegiosDatabase.value
+    .filter(item => 
+      item.D_DPTO === formData.value.departamento &&
+      item.D_PROV === formData.value.provincia
+    )
+    .map(item => item.D_DIST)
+  return [...new Set(distritos)].sort()
 })
+
 const onDepartamentoChange = () => { formData.value.provincia = ''; formData.value.distrito = '' }
 const onProvinciaChange = () => { formData.value.distrito = '' }
 
+
+// ==============================================================
+// LÓGICA DE CASCADA PARA EL PASO 3 (COLEGIOS)
+// ==============================================================
+const departamentosColegioDisponibles = computed(() => departamentosNacionales.value)
+
 const provinciasColegioDisponibles = computed(() => {
-  if (!formData.value.departamentoColegio || !ubigeoData[formData.value.departamentoColegio]) return []
-  return Object.keys(ubigeoData[formData.value.departamentoColegio])
+  if (!formData.value.departamentoColegio) return []
+  const provincias = colegiosDatabase.value
+    .filter(item => item.D_DPTO === formData.value.departamentoColegio)
+    .map(item => item.D_PROV)
+  return [...new Set(provincias)].sort()
 })
+
 const distritosColegioDisponibles = computed(() => {
-  if (!formData.value.departamentoColegio || !formData.value.provinciaColegio) return []
-  return ubigeoData[formData.value.departamentoColegio][formData.value.provinciaColegio] || []
+  if (!formData.value.provinciaColegio) return []
+  const distritos = colegiosDatabase.value
+    .filter(item => 
+      item.D_DPTO === formData.value.departamentoColegio &&
+      item.D_PROV === formData.value.provinciaColegio
+    )
+    .map(item => item.D_DIST)
+  return [...new Set(distritos)].sort()
 })
+
 const colegiosDisponibles = computed(() => {
   if (!formData.value.distritoColegio) return []
-  return colegiosData[formData.value.distritoColegio] || ["COLEGIO NACIONAL MIXTO", "OTRO"]
+  const colegiosFiltrados = colegiosDatabase.value
+    .filter(item => 
+      item.D_DPTO === formData.value.departamentoColegio &&
+      item.D_PROV === formData.value.provinciaColegio && 
+      item.D_DIST === formData.value.distritoColegio
+    )
+    .sort((a, b) => a.CEN_EDU.localeCompare(b.CEN_EDU))
+  return colegiosFiltrados
 })
+
 const onDepartamentoColegioChange = () => { formData.value.provinciaColegio = ''; formData.value.distritoColegio = ''; formData.value.nombreColegio = '' }
 const onProvinciaColegioChange = () => { formData.value.distritoColegio = ''; formData.value.nombreColegio = '' }
 const onDistritoColegioChange = () => { formData.value.nombreColegio = '' }
 
+
+// Función que se ejecuta cada vez que el postulante escribe o selecciona un colegio
+const buscarCodigoModular = () => {
+  // 1. Convertimos a mayúsculas
+  formData.value.nombreColegio = String(formData.value.nombreColegio).toUpperCase()
+
+  // 2. Buscamos el colegio exacto en la lista del distrito
+  const colegioEncontrado = colegiosDisponibles.value.find(
+    (c) => c.CEN_EDU === formData.value.nombreColegio
+  )
+
+  // 3. Separamos los datos: El código se va a su variable, el nombre se queda en la suya
+  if (colegioEncontrado) {
+    formData.value.codigoModular = colegioEncontrado.COD_MOD
+  } else {
+    formData.value.codigoModular = ''
+  }
+}
 
 // --- FUNCIONES PARA FORZAR MAYÚSCULAS Y NÚMEROS ---
 const forceLetters = (field: keyof typeof formData.value) => {
@@ -539,10 +651,17 @@ const nextStep = async () => {
 
   // VALIDACIONES PASO 1
   if (currentStep.value === 1) {
-    if (!formData.value.primerApellido || !formData.value.nombres || !formData.value.correo || !formData.value.ubigeoNacimiento || !formData.value.celular || !formData.value.fechaNacimiento) {
+    // 👇 Se agregó !formData.value.dni para que sea obligatorio no dejarlo vacío
+    if (!formData.value.dni || !formData.value.primerApellido || !formData.value.nombres || !formData.value.correo || !formData.value.ubigeoNacimiento || !formData.value.celular || !formData.value.fechaNacimiento) {
       errorMsg.value = 'Debes llenar todos los campos obligatorios (*)'
       return
     }
+    
+    if (formData.value.dni.length !== 8) {
+      errorMsg.value = 'El DNI debe tener exactamente 8 números'
+      return
+    }
+
     if (formData.value.celular.length < 9) {
       errorMsg.value = 'El número de celular debe tener 9 dígitos'
       return
@@ -576,20 +695,13 @@ const nextStep = async () => {
       errorMsg.value = 'El DNI de la madre debe tener exactamente 8 números'
       return
     }
-    if (formData.value.padreDocumento && formData.value.padreDocumento.length !== 8) {
-      errorMsg.value = 'El DNI del padre debe tener exactamente 8 números'
-      return
-    }
+    // 👇 Eliminé la validación del padre porque ya no existe en tu formulario
   }
   
-  // PASO 5: ENVÍO A GOOGLE SHEETS
+ // PASO 5: ENVÍO A GOOGLE SHEETS
   if (currentStep.value === 5) {
     if (!formData.value.programaEstudio) {
       errorMsg.value = 'Debes seleccionar un Programa de Estudios'
-      return
-    }
-    if (!formData.value.codigoPago) { // <--- NUEVA VALIDACIÓN
-      errorMsg.value = 'El código de pago del voucher es obligatorio'
       return
     }
 
@@ -600,14 +712,14 @@ const nextStep = async () => {
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(formData.value)
       })
-      alert("¡Felicidades! Tu preinscripción fue registrada con éxito.")
       
-      // Resetea el formulario al terminar
-      window.location.reload() 
+      // 👇 Activamos la pantalla de éxito moderna y subimos la vista arriba
+      isSuccess.value = true 
+      window.scrollTo({ top: 0, behavior: 'smooth' })
       
     } catch (error) {
       console.error(error)
-      alert("Hubo un error de conexión. Por favor, intenta nuevamente.")
+      errorMsg.value = "Hubo un error de conexión. Por favor, revisa tu internet e intenta nuevamente."
     } finally {
       isSubmitting.value = false
     }
@@ -753,5 +865,20 @@ const prevStep = () => {
 .fade-modal-enter-from,
 .fade-modal-leave-to {
   opacity: 0;
+}
+
+.success-animation {
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
